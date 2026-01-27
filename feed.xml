@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Parallax</title>
+    <description>A free daily newsletter showing how the same news stories are covered across the political spectrum.</description>
+    <link>https://www.readparallax.com</link>
+    <atom:link href="https://www.readparallax.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Jan 2026 08:00:00 -0500</lastBuildDate>
+    
+    <item>
+      <title>The Parallax - Tuesday, January 27, 2026</title>
+      <link>https://www.readparallax.com/archive/the-parallax---tuesday--january-27--2026.html</link>
+      <guid>https://www.readparallax.com/archive/the-parallax---tuesday--january-27--2026.html</guid>
+      <pubDate>Tue, 27 Jan 2026 08:00:00 -0500</pubDate>
+      <description>Minneapolis ICE shooting sparks national debate, White House announces 25% tariff on South Korean imports, and more.</description>
+    </item>
+    
+  </channel>
+</rss>
