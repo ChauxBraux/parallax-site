@@ -3,120 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Parallax - Multiple angles. One picture.</title>
+  <title>Archive - The Parallax</title>
+  <meta name="description" content="Browse past issues of The Parallax daily news digest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
     body {
-      font-family: Georgia, 'Times New Roman', serif;
-      background-color: #f5f5f5;
-      color: #1a1a1a;
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
     }
-    .container {
-      background: #ffffff;
-      max-width: 600px;
-      width: 100%;
-      padding: 48px 32px;
+    
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 60px 24px;
       text-align: center;
-      border-top: 4px solid #1d3557;
+      border-bottom: 1px solid #e9ecef;
     }
-    h1 {
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
       font-size: 2.5em;
-      letter-spacing: 2px;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-    .tagline {
-      color: #457b9d;
-      font-style: italic;
-      font-size: 1.1em;
-      margin-bottom: 32px;
-    }
-    .description {
-      color: #444;
-      line-height: 1.7;
-      margin-bottom: 32px;
-      font-size: 1em;
-    }
-    .embeddable-buttondown-form {
-      margin: 32px 0;
-    }
-    .embeddable-buttondown-form label {
-      display: block;
-      margin-bottom: 8px;
-      color: #666;
-      font-size: 0.9em;
-    }
-    .embeddable-buttondown-form input[type="email"] {
-      width: 100%;
-      max-width: 300px;
-      padding: 12px 16px;
-      font-size: 1em;
-      font-family: Georgia, serif;
-      border: 1px solid #ccc;
+      color: var(--navy);
       margin-bottom: 12px;
     }
-    .embeddable-buttondown-form input[type="submit"] {
-      background-color: #1d3557;
-      color: #fff;
-      border: none;
-      padding: 12px 32px;
-      font-size: 1em;
-      font-family: Georgia, serif;
-      cursor: pointer;
-      transition: background-color 0.2s;
+    
+    .page-header p {
+      color: var(--text-light);
+      font-size: 1.1em;
     }
-    .embeddable-buttondown-form input[type="submit"]:hover {
-      background-color: #457b9d;
+    
+    /* Archive List */
+    .archive-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      flex: 1;
     }
-    .embeddable-buttondown-form p {
-      margin-top: 16px;
-      font-size: 0.75em;
+    
+    .archive-list {
+      list-style: none;
     }
-    .embeddable-buttondown-form p a {
-      color: #999;
+    
+    .archive-list li {
+      background: white;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border: 1px solid #e9ecef;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    
+    .archive-list li:hover {
+      border-color: var(--blue);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    
+    .archive-list a {
+      display: block;
+      padding: 20px 24px;
       text-decoration: none;
+      color: var(--text);
     }
-    .archive-link {
-      margin-top: 32px;
+    
+    .archive-list .issue-date {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.2em;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    
+    .archive-list .issue-preview {
+      font-size: 0.9em;
+      color: var(--text-light);
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--text-light);
+    }
+    
+    .empty-state p {
+      margin-bottom: 24px;
+    }
+    
+    .empty-state a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
       font-size: 0.9em;
     }
-    .archive-link a {
-      color: #457b9d;
-      text-decoration: underline;
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2em;
+      }
+      
+      .nav-links {
+        gap: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9em;
+      }
+      
+      .archive-list a {
+        padding: 16px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>THE PARALLAX</h1>
-    <p class="tagline">Multiple angles. One picture.</p>
-    <p class="description">
-      A daily news digest that shows you how the same stories are covered across the political spectrum. 
-      From NPR to Fox News, The Guardian to Daily Wire—see multiple perspectives, form your own view.
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">THE PARALLAX</a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/" class="active">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Archive</h1>
+    <p>Browse past issues</p>
+  </header>
+
+  <main class="archive-container">
+    <ul class="archive-list">
+      <li>
+        <a href="the-parallax---tuesday--january-27--2026.html">
+          <div class="issue-date">Tuesday, January 27, 2026</div>
+          <div class="issue-preview">Minneapolis ICE shooting, South Korea tariffs, Gaza ceasefire updates...</div>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
     </p>
-    
-    <form
-      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
-      method="post"
-      class="embeddable-buttondown-form"
-    >
-      <label for="bd-email">Get it free every morning</label>
-      <input type="email" name="email" id="bd-email" placeholder="you@email.com" required />
-      <br>
-      <input type="submit" value="Subscribe" />
-      <p>
-        <a href="https://buttondown.com/refer/parallax" target="_blank">Powered by Buttondown</a>
-      </p>
-    </form>
-    
-    <p class="archive-link">
-      <a href="/archive/">Browse past issues →</a>
-    </p>
-  </div>
+  </footer>
 </body>
 </html>
