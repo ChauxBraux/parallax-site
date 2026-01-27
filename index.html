@@ -4,7 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Parallax - Multiple angles. One picture.</title>
-  <meta name="description" content="A daily news digest showing how the same stories are covered across the political spectrum. See multiple perspectives, form your own view.">
+  <meta name="description" content="A free daily news digest showing how the same stories are covered across the political spectrum. See multiple perspectives, form your own view.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/">
+  <meta property="og:title" content="The Parallax - Multiple angles. One picture.">
+  <meta property="og:description" content="A free daily newsletter showing how the same news stories are covered across the political spectrum—from NPR to Fox News, The Guardian to Daily Wire.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.readparallax.com/">
+  <meta name="twitter:title" content="The Parallax - Multiple angles. One picture.">
+  <meta name="twitter:description" content="A free daily newsletter showing how the same news stories are covered across the political spectrum—from NPR to Fox News, The Guardian to Daily Wire.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "The Parallax",
+    "description": "A free daily newsletter showing how the same news stories are covered across the political spectrum.",
+    "url": "https://www.readparallax.com",
+    "potentialAction": {
+      "@type": "SubscribeAction",
+      "target": "https://buttondown.com/parallax"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Parallax",
+    "url": "https://www.readparallax.com",
+    "description": "AI-powered balanced news aggregation across the political spectrum",
+    "email": "hello@readparallax.com",
+    "location": {
+      "@type": "Place",
+      "address": "Pittsburgh, PA"
+    }
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -362,18 +408,18 @@
       border-color: var(--blue);
     }
     
-    /* Preview Section */
-    .preview {
+    /* Latest Issue Section */
+    .latest-issue {
       padding: 80px 24px;
       background: white;
     }
     
-    .preview-container {
+    .latest-container {
       max-width: 700px;
       margin: 0 auto;
     }
     
-    .preview-box {
+    .issue-box {
       background: var(--cream);
       border: 1px solid #e9ecef;
       border-radius: 12px;
@@ -382,57 +428,107 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    .preview-box:hover {
+    .issue-box:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.08);
     }
     
-    .preview-header {
+    .issue-header {
       text-align: center;
       padding-bottom: 24px;
       border-bottom: 2px solid var(--navy);
       margin-bottom: 24px;
     }
     
-    .preview-header h3 {
+    .issue-header h3 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.8em;
+      font-size: 1.6em;
       letter-spacing: 2px;
       color: var(--text);
     }
     
-    .preview-header p {
+    .issue-header .issue-date {
       color: var(--blue);
       font-style: italic;
       margin-top: 4px;
+      font-size: 0.95em;
     }
     
-    .preview-story h4 {
-      font-family: 'Playfair Display', Georgia, serif;
+    .issue-story {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .issue-story:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .issue-story .category {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       color: var(--blue);
-      font-size: 1.1em;
+      font-weight: 600;
       margin-bottom: 8px;
     }
     
-    .preview-story p {
+    .issue-story h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      font-size: 1.15em;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    
+    .issue-story p {
       font-size: 0.95em;
       line-height: 1.7;
       color: var(--text);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     
-    .preview-perspectives {
+    .issue-story .perspectives {
       font-size: 0.85em;
       color: var(--text-light);
-      font-style: italic;
+      line-height: 1.6;
     }
     
-    .preview-cta {
+    .perspectives strong {
+      color: var(--text);
+    }
+    
+    .read-more {
       text-align: center;
-      margin-top: 32px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid #e9ecef;
     }
     
-    .preview-cta a {
+    .read-more a {
+      display: inline-block;
+      color: white;
+      background: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 6px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    
+    .read-more a:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+    }
+    
+    .archive-link {
+      text-align: center;
+      margin-top: 24px;
+    }
+    
+    .archive-link a {
       color: var(--blue);
       text-decoration: none;
       font-weight: 600;
@@ -441,7 +537,7 @@
       transition: color 0.2s;
     }
     
-    .preview-cta a::after {
+    .archive-link a::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -453,7 +549,7 @@
       transition: transform 0.3s ease;
     }
     
-    .preview-cta a:hover::after {
+    .archive-link a:hover::after {
       transform: scaleX(1);
     }
     
@@ -522,7 +618,7 @@
       
       .how-it-works,
       .sources,
-      .preview,
+      .latest-issue,
       .cta {
         padding: 60px 20px;
       }
@@ -540,7 +636,7 @@
         margin-bottom: 16px;
       }
       
-      .preview-box {
+      .issue-box {
         padding: 24px 20px;
       }
     }
@@ -579,7 +675,7 @@
       
       .how-it-works,
       .sources,
-      .preview,
+      .latest-issue,
       .cta {
         padding: 48px 16px;
       }
@@ -695,25 +791,39 @@
     </div>
   </section>
 
-  <section class="preview">
-    <div class="preview-container">
-      <h2 class="section-title reveal">What You'll Get</h2>
-      <div class="preview-box reveal">
-        <div class="preview-header">
+  <section class="latest-issue">
+    <div class="latest-container">
+      <h2 class="section-title reveal">Latest Issue</h2>
+      <div class="issue-box reveal">
+        <div class="issue-header">
           <h3>THE PARALLAX</h3>
-          <p>Multiple angles. One picture.</p>
+          <p class="issue-date">Tuesday, January 27, 2026</p>
         </div>
-        <div class="preview-story">
-          <h4>POLITICS</h4>
-          <p><strong>Federal Policy Shift Sparks Debate Across Party Lines</strong></p>
-          <p>A new policy announcement triggered responses from both sides of the aisle, with lawmakers citing different priorities and concerns...</p>
-          <p class="preview-perspectives">
-            <strong>Coverage breakdown:</strong> The Guardian frames this as... Fox News emphasizes... NPR reports...
+        
+        <div class="issue-story">
+          <p class="category">Immigration</p>
+          <h4>Fatal Shooting During Minneapolis ICE Operation Sparks National Debate</h4>
+          <p>A man was killed during an Immigration and Customs Enforcement operation in Minneapolis, prompting immediate reactions across the political spectrum about enforcement tactics and sanctuary city policies.</p>
+          <p class="perspectives">
+            <strong>From the left:</strong> The Guardian emphasizes community fear and questions about use of force during routine operations. <strong>From the right:</strong> Fox News focuses on the suspect's criminal history and frames the incident as justification for aggressive enforcement.
           </p>
         </div>
+        
+        <div class="issue-story">
+          <p class="category">Trade</p>
+          <h4>White House Announces 25% Tariff on South Korean Imports</h4>
+          <p>The administration unveiled sweeping new tariffs targeting South Korean goods, marking a significant shift in trade relations with a key ally and economic partner.</p>
+          <p class="perspectives">
+            <strong>From the left:</strong> Washington Post warns of consumer price impacts and diplomatic fallout. <strong>From the right:</strong> Washington Examiner frames tariffs as necessary leverage for renegotiating trade imbalances.
+          </p>
+        </div>
+        
+        <div class="read-more">
+          <a href="/archive/the-parallax---tuesday--january-27--2026.html">Read Full Issue →</a>
+        </div>
       </div>
-      <p class="preview-cta reveal">
-        <a href="/archive/">Browse past issues →</a>
+      <p class="archive-link reveal">
+        <a href="/archive/">Browse all past issues →</a>
       </p>
     </div>
   </section>
