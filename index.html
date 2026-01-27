@@ -1,1 +1,122 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Parallax - Multiple angles. One picture.</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #f5f5f5;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: #ffffff;
+      max-width: 600px;
+      width: 100%;
+      padding: 48px 32px;
+      text-align: center;
+      border-top: 4px solid #1d3557;
+    }
+    h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      color: #457b9d;
+      font-style: italic;
+      font-size: 1.1em;
+      margin-bottom: 32px;
+    }
+    .description {
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      font-size: 1em;
+    }
+    .embeddable-buttondown-form {
+      margin: 32px 0;
+    }
+    .embeddable-buttondown-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #666;
+      font-size: 0.9em;
+    }
+    .embeddable-buttondown-form input[type="email"] {
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 16px;
+      font-size: 1em;
+      font-family: Georgia, serif;
+      border: 1px solid #ccc;
+      margin-bottom: 12px;
+    }
+    .embeddable-buttondown-form input[type="submit"] {
+      background-color: #1d3557;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 1em;
+      font-family: Georgia, serif;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .embeddable-buttondown-form input[type="submit"]:hover {
+      background-color: #457b9d;
+    }
+    .embeddable-buttondown-form p {
+      margin-top: 16px;
+      font-size: 0.75em;
+    }
+    .embeddable-buttondown-form p a {
+      color: #999;
+      text-decoration: none;
+    }
+    .archive-link {
+      margin-top: 32px;
+      font-size: 0.9em;
+    }
+    .archive-link a {
+      color: #457b9d;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>THE PARALLAX</h1>
+    <p class="tagline">Multiple angles. One picture.</p>
+    <p class="description">
+      A daily news digest that shows you how the same stories are covered across the political spectrum. 
+      From NPR to Fox News, The Guardian to Daily Wire—see multiple perspectives, form your own view.
+    </p>
+    
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="embeddable-buttondown-form"
+    >
+      <label for="bd-email">Get it free every morning</label>
+      <input type="email" name="email" id="bd-email" placeholder="you@email.com" required />
+      <br>
+      <input type="submit" value="Subscribe" />
+      <p>
+        <a href="https://buttondown.com/refer/parallax" target="_blank">Powered by Buttondown</a>
+      </p>
+    </form>
+    
+    <p class="archive-link">
+      <a href="/archive/">Browse past issues →</a>
+    </p>
+  </div>
+</body>
+</html>
