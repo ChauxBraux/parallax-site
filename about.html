@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - The Parallax</title>
+  <meta name="description" content="Learn how The Parallax works—our methodology for aggregating news from across the political spectrum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--blue);
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 60px 24px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    
+    .page-header p {
+      color: var(--text-light);
+      font-size: 1.2em;
+    }
+    
+    /* Content */
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    
+    .content h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6em;
+      color: var(--navy);
+      margin-bottom: 16px;
+      margin-top: 48px;
+    }
+    
+    .content h2:first-child {
+      margin-top: 0;
+    }
+    
+    .content p {
+      margin-bottom: 20px;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+    
+    .content ul {
+      margin-bottom: 20px;
+      padding-left: 24px;
+    }
+    
+    .content li {
+      margin-bottom: 8px;
+      font-size: 1.05em;
+      line-height: 1.7;
+    }
+    
+    /* Source Table */
+    .source-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 32px;
+      font-size: 0.95em;
+    }
+    
+    .source-table th {
+      background: var(--navy);
+      color: white;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .source-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e9ecef;
+      background: white;
+    }
+    
+    .source-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .bias-left {
+      color: #2563eb;
+    }
+    
+    .bias-center {
+      color: #6b7280;
+    }
+    
+    .bias-right {
+      color: #dc2626;
+    }
+    
+    /* Highlight Box */
+    .highlight-box {
+      background: white;
+      border-left: 4px solid var(--blue);
+      padding: 24px;
+      margin: 32px 0;
+    }
+    
+    .highlight-box p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--text);
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 60px 24px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      margin-bottom: 16px;
+    }
+    
+    .cta p {
+      opacity: 0.85;
+      margin-bottom: 32px;
+      font-size: 1.1em;
+    }
+    
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2em;
+      }
+      
+      .nav-links {
+        gap: 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9em;
+      }
+      
+      .signup-form input[type="email"] {
+        min-width: 100%;
+      }
+      
+      .source-table {
+        font-size: 0.85em;
+      }
+      
+      .source-table th,
+      .source-table td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">THE PARALLAX</a>
+      <div class="nav-links">
+        <a href="/about.html" class="active">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>About The Parallax</h1>
+    <p>Understanding our methodology and mission</p>
+  </header>
+
+  <main class="content">
+    <h2>Why We Exist</h2>
+    <p>
+      Media polarization is real. The same event can be reported in radically different ways depending on which outlet you read. Headlines emphasize different angles. Context gets selectively included or omitted. Over time, people who consume news from only one side of the spectrum develop very different understandings of what's happening in the world.
+    </p>
+    <p>
+      The Parallax exists to show you the full picture. Every day, we aggregate news from sources across the political spectrum and show you how the same stories are being covered by different outlets. We don't tell you what to think—we show you what everyone is saying, so you can form your own view.
+    </p>
+
+    <div class="highlight-box">
+      <p>"In photography, parallax is the difference between what you see through the viewfinder and what the camera actually captures. In media, it's the difference between what one outlet reports and what another emphasizes. We show you all the angles."</p>
+    </div>
+
+    <h2>How It Works</h2>
+    <p>
+      Each morning, our automated system pulls the latest articles from 15 curated news sources. We use AI to identify when multiple outlets are covering the same underlying story, then cluster those articles together.
+    </p>
+    <p>
+      For each major story, we synthesize what's being reported and explicitly show how different outlets are framing the same events. We include direct links to original sources so you can read the full coverage yourself.
+    </p>
+    <p>
+      Importantly, we enforce balance: every story in our digest must include perspectives from both left-leaning and right-leaning sources. If we can only find coverage from one side of the spectrum, we don't include it.
+    </p>
+
+    <h2>Our Sources</h2>
+    <p>
+      We pull from 15 sources across the political spectrum. These were selected for reliability, consistent RSS feed availability, and clear editorial positioning:
+    </p>
+
+    <table class="source-table">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Positioning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NPR</td>
+          <td class="bias-left">Left-leaning</td>
+        </tr>
+        <tr>
+          <td>The Guardian</td>
+          <td class="bias-left">Left-leaning</td>
+        </tr>
+        <tr>
+          <td>Washington Post</td>
+          <td class="bias-left">Left-leaning</td>
+        </tr>
+        <tr>
+          <td>Vox</td>
+          <td class="bias-left">Left-leaning</td>
+        </tr>
+        <tr>
+          <td>BBC</td>
+          <td class="bias-center">Center-left</td>
+        </tr>
+        <tr>
+          <td>Al Jazeera</td>
+          <td class="bias-center">Center-left</td>
+        </tr>
+        <tr>
+          <td>Axios</td>
+          <td class="bias-center">Center-left</td>
+        </tr>
+        <tr>
+          <td>Bloomberg</td>
+          <td class="bias-center">Center</td>
+        </tr>
+        <tr>
+          <td>MarketWatch</td>
+          <td class="bias-center">Center</td>
+        </tr>
+        <tr>
+          <td>Fox News</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+        <tr>
+          <td>Washington Examiner</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+        <tr>
+          <td>NY Post</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+        <tr>
+          <td>Daily Wire</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+        <tr>
+          <td>Newsmax</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+        <tr>
+          <td>Zero Hedge</td>
+          <td class="bias-right">Right-leaning</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>What We're Not</h2>
+    <p>
+      We're not a fact-checker. We don't grade sources or tell you who's "right." Our goal is transparency about how different outlets cover the same events—not to act as arbiters of truth.
+    </p>
+    <p>
+      We're also not comprehensive. We surface major stories that get coverage across the spectrum. Niche stories, local news, and topics only covered by one side won't appear in our digest.
+    </p>
+
+    <h2>Built With AI</h2>
+    <p>
+      The Parallax is generated using Claude, an AI assistant from Anthropic. The AI handles clustering related stories and synthesizing coverage, while the source selection, balance requirements, and editorial framework are human-designed.
+    </p>
+    <p>
+      We believe AI can be a powerful tool for information synthesis without ideological bias—when properly designed and constrained. Our balance enforcement ensures the AI can't inadvertently favor one side.
+    </p>
+
+    <h2>Questions?</h2>
+    <p>
+      Reach out anytime at <a href="mailto:hello@readparallax.com" style="color: var(--blue);">hello@readparallax.com</a>.
+    </p>
+  </main>
+
+  <section class="cta">
+    <h2>See For Yourself</h2>
+    <p>Get the full picture delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+</body>
+</html>
