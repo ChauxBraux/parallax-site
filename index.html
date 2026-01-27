@@ -42,6 +42,7 @@
     "@type": "Organization",
     "name": "The Parallax",
     "url": "https://www.readparallax.com",
+    "logo": "https://www.readparallax.com/logo.png",
     "description": "AI-powered balanced news aggregation across the political spectrum",
     "email": "hello@readparallax.com",
     "location": {
@@ -132,17 +133,19 @@
     }
     
     .nav-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 1px;
       transition: opacity 0.2s;
     }
     
     .nav-logo:hover {
       opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
     
     .nav-links {
@@ -616,6 +619,10 @@
         gap: 24px;
       }
       
+      .nav-logo img {
+        height: 30px;
+      }
+      
       .how-it-works,
       .sources,
       .latest-issue,
@@ -646,8 +653,8 @@
         padding: 14px 16px;
       }
       
-      .nav-logo {
-        font-size: 1.3em;
+      .nav-logo img {
+        height: 26px;
       }
       
       .nav-links {
@@ -705,7 +712,9 @@
 <body>
   <nav>
     <div class="nav-container">
-      <a href="/" class="nav-logo">THE PARALLAX</a>
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
       <div class="nav-links">
         <a href="/about.html">About</a>
         <a href="/archive/">Archive</a>
