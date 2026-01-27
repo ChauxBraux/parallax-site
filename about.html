@@ -4,7 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - The Parallax</title>
-  <meta name="description" content="Learn how The Parallax works—our methodology for aggregating news from across the political spectrum.">
+  <meta name="description" content="Learn how The Parallax works—our methodology for aggregating news from across the political spectrum to show you multiple perspectives.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/about.html">
+  <meta property="og:title" content="About The Parallax">
+  <meta property="og:description" content="Learn how The Parallax aggregates news from 15 sources across the political spectrum to show you how the same stories are covered differently.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.readparallax.com/about.html">
+  <meta name="twitter:title" content="About The Parallax">
+  <meta name="twitter:description" content="Learn how The Parallax aggregates news from 15 sources across the political spectrum to show you how the same stories are covered differently.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
+  <!-- Structured Data - FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is The Parallax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Parallax is a free daily newsletter that shows how the same news stories are covered across the political spectrum, from NPR to Fox News, The Guardian to Daily Wire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does The Parallax work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each morning, our system pulls articles from 15 news sources across the political spectrum. AI identifies when multiple outlets cover the same story, clusters them together, and synthesizes how different outlets frame the same events."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What sources does The Parallax use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use 15 sources: Left-leaning (NPR, The Guardian, Washington Post, Vox), Center (BBC, Axios, Bloomberg, MarketWatch, Al Jazeera), and Right-leaning (Fox News, Daily Wire, NY Post, Washington Examiner, Newsmax, Zero Hedge)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is The Parallax free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, The Parallax is completely free. Subscribe at readparallax.com to receive the daily digest in your inbox every morning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is The Parallax a fact-checker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We don't grade sources or tell you who's right. Our goal is transparency about how different outlets cover the same events—not to act as arbiters of truth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is The Parallax built?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Parallax is generated using Claude, an AI assistant from Anthropic. The AI handles clustering related stories and synthesizing coverage, while the source selection, balance requirements, and editorial framework are human-designed."
+        }
+      }
+    ]
+  }
+  </script>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -253,6 +327,79 @@
       color: var(--text);
     }
     
+    /* FAQ Section */
+    .faq-section {
+      padding: 60px 24px;
+      background: white;
+    }
+    
+    .faq-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .faq-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6em, 5vw, 2em);
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--navy);
+    }
+    
+    .faq-item {
+      margin-bottom: 24px;
+      background: var(--cream);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    
+    .faq-question {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1em;
+      color: var(--navy);
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    
+    .faq-question::after {
+      content: '+';
+      font-size: 1.4em;
+      font-weight: 300;
+      color: var(--blue);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+    
     /* CTA Section */
     .cta {
       padding: 60px 24px;
@@ -386,6 +533,10 @@
         margin-top: 40px;
       }
       
+      .faq-section {
+        padding: 48px 20px;
+      }
+      
       .cta {
         padding: 48px 20px;
       }
@@ -438,6 +589,15 @@
       
       .highlight-box {
         padding: 20px 16px;
+      }
+      
+      .faq-question {
+        padding: 16px 20px;
+        font-size: 1em;
+      }
+      
+      .faq-answer-inner {
+        padding: 0 20px 16px;
       }
       
       .footer-links {
@@ -595,62 +755,3 @@
     <h2 class="reveal">Questions?</h2>
     <p class="reveal">
       Reach out anytime at <a href="mailto:hello@readparallax.com">hello@readparallax.com</a>.
-    </p>
-  </main>
-
-  <section class="cta">
-    <h2 class="reveal">See For Yourself</h2>
-    <p class="reveal">Get the full picture delivered to your inbox every morning.</p>
-    <form
-      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
-      method="post"
-      class="signup-form reveal"
-    >
-      <input type="email" name="email" placeholder="you@email.com" required />
-      <input type="submit" value="Subscribe Free" />
-    </form>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/archive/">Archive</a>
-    </div>
-    <p class="footer-note">
-      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
-      Pittsburgh, PA
-    </p>
-  </footer>
-
-  <script>
-    // Nav shadow on scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-    
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealOnScroll = () => {
-      const windowHeight = window.innerHeight;
-      revealElements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 150;
-        
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add('visible');
-        }
-      });
-    };
-    
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
-</body>
-</html>
