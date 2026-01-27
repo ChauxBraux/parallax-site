@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive - The Parallax</title>
-  <meta name="description" content="Browse past issues of The Parallax daily news digest.">
+  <title>The Parallax - Multiple angles. One picture.</title>
+  <meta name="description" content="A daily news digest showing how the same stories are covered across the political spectrum. See multiple perspectives, form your own view.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -25,9 +25,6 @@
       color: var(--text);
       line-height: 1.6;
       background: var(--cream);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
     
     /* Navigation */
@@ -69,88 +66,271 @@
       transition: color 0.2s;
     }
     
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:hover {
       color: var(--blue);
     }
     
-    /* Page Header */
-    .page-header {
-      background: white;
-      padding: 60px 24px;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      color: white;
+      padding: 80px 24px;
       text-align: center;
-      border-bottom: 1px solid #e9ecef;
     }
     
-    .page-header h1 {
+    .hero h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.5em;
-      color: var(--navy);
-      margin-bottom: 12px;
+      font-size: 3.5em;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
     }
     
-    .page-header p {
-      color: var(--text-light);
+    .hero .tagline {
+      font-size: 1.4em;
+      opacity: 0.9;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    
+    .hero .description {
+      max-width: 600px;
+      margin: 0 auto 40px;
       font-size: 1.1em;
+      opacity: 0.85;
+      line-height: 1.7;
     }
     
-    /* Archive List */
-    .archive-container {
+    /* Signup Form */
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+    }
+    
+    .signup-note {
+      margin-top: 16px;
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+      padding: 80px 24px;
+      background: white;
+    }
+    
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--navy);
+    }
+    
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+    
+    .step {
+      text-align: center;
+      padding: 24px;
+    }
+    
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      font-weight: 600;
+      margin: 0 auto 20px;
+    }
+    
+    .step h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3em;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+    
+    .step p {
+      color: var(--text-light);
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    
+    /* Sources Section */
+    .sources {
+      padding: 80px 24px;
+      background: var(--cream);
+    }
+    
+    .sources-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .source-group {
+      text-align: center;
+    }
+    
+    .source-group h4 {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+    
+    .source-logos {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .source-logos span {
+      font-size: 0.9em;
+      color: var(--text);
+      padding: 8px 16px;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid #e9ecef;
+    }
+    
+    /* Preview Section */
+    .preview {
+      padding: 80px 24px;
+      background: white;
+    }
+    
+    .preview-container {
       max-width: 700px;
       margin: 0 auto;
-      padding: 48px 24px;
-      flex: 1;
     }
     
-    .archive-list {
-      list-style: none;
-    }
-    
-    .archive-list li {
-      background: white;
-      margin-bottom: 12px;
-      border-radius: 6px;
+    .preview-box {
+      background: var(--cream);
       border: 1px solid #e9ecef;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 32px;
     }
     
-    .archive-list li:hover {
-      border-color: var(--blue);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    
-    .archive-list a {
-      display: block;
-      padding: 20px 24px;
-      text-decoration: none;
-      color: var(--text);
-    }
-    
-    .archive-list .issue-date {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.2em;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-    
-    .archive-list .issue-preview {
-      font-size: 0.9em;
-      color: var(--text-light);
-    }
-    
-    .empty-state {
+    .preview-header {
       text-align: center;
-      padding: 60px 24px;
-      color: var(--text-light);
-    }
-    
-    .empty-state p {
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--navy);
       margin-bottom: 24px;
     }
     
-    .empty-state a {
+    .preview-header h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+    
+    .preview-header p {
+      color: var(--blue);
+      font-style: italic;
+      margin-top: 4px;
+    }
+    
+    .preview-story h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--blue);
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    
+    .preview-story p {
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    
+    .preview-perspectives {
+      font-size: 0.85em;
+      color: var(--text-light);
+      font-style: italic;
+    }
+    
+    .preview-cta {
+      text-align: center;
+      margin-top: 32px;
+    }
+    
+    .preview-cta a {
       color: var(--blue);
       text-decoration: underline;
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 80px 24px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2em;
+      margin-bottom: 16px;
+    }
+    
+    .cta p {
+      opacity: 0.85;
+      margin-bottom: 32px;
+      font-size: 1.1em;
     }
     
     /* Footer */
@@ -159,7 +339,6 @@
       color: white;
       padding: 40px 24px;
       text-align: center;
-      margin-top: auto;
     }
     
     .footer-links {
@@ -186,23 +365,40 @@
     
     /* Responsive */
     @media (max-width: 768px) {
-      .page-header h1 {
-        font-size: 2em;
+      .hero h1 {
+        font-size: 2.5em;
+      }
+      
+      .hero .tagline {
+        font-size: 1.2em;
       }
       
       .nav-links {
         gap: 20px;
       }
+      
+      .section-title {
+        font-size: 1.6em;
+      }
     }
     
     @media (max-width: 480px) {
+      .hero {
+        padding: 60px 20px;
+      }
+      
+      .hero h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+      }
+      
       .nav-links {
         gap: 16px;
         font-size: 0.9em;
       }
       
-      .archive-list a {
-        padding: 16px 20px;
+      .signup-form input[type="email"] {
+        min-width: 100%;
       }
     }
   </style>
@@ -213,26 +409,122 @@
       <a href="/" class="nav-logo">THE PARALLAX</a>
       <div class="nav-links">
         <a href="/about.html">About</a>
-        <a href="/archive/" class="active">Archive</a>
+        <a href="/archive/">Archive</a>
       </div>
     </div>
   </nav>
 
-  <header class="page-header">
-    <h1>Archive</h1>
-    <p>Browse past issues</p>
-  </header>
+  <section class="hero">
+    <h1>THE PARALLAX</h1>
+    <p class="tagline">Multiple angles. One picture.</p>
+    <p class="description">
+      Every morning, we show you how the same news stories are covered across the political spectrum—from NPR to Fox News, The Guardian to Daily Wire. See the full picture. Form your own view.
+    </p>
+    
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+    <p class="signup-note">Free daily digest. No spam. Unsubscribe anytime.</p>
+  </section>
 
-  <main class="archive-container">
-    <ul class="archive-list">
-      <li>
-        <a href="the-parallax---tuesday--january-27--2026.html">
-          <div class="issue-date">Tuesday, January 27, 2026</div>
-          <div class="issue-preview">Minneapolis ICE shooting, South Korea tariffs, Gaza ceasefire updates...</div>
-        </a>
-      </li>
-    </ul>
-  </main>
+  <section class="how-it-works">
+    <div class="section-container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>We Aggregate</h3>
+          <p>Every day, we pull from 15 news sources across the political spectrum—left, right, and center.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>AI Clusters</h3>
+          <p>Our AI identifies when multiple outlets cover the same story and groups them together.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>You Compare</h3>
+          <p>Each story shows how different outlets frame the same events—so you see what each side emphasizes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sources">
+    <div class="section-container">
+      <h2 class="section-title">Our Sources</h2>
+      <div class="sources-grid">
+        <div class="source-group">
+          <h4>Left-Leaning</h4>
+          <div class="source-logos">
+            <span>NPR</span>
+            <span>The Guardian</span>
+            <span>Washington Post</span>
+            <span>Vox</span>
+          </div>
+        </div>
+        <div class="source-group">
+          <h4>Center</h4>
+          <div class="source-logos">
+            <span>BBC</span>
+            <span>Axios</span>
+            <span>Bloomberg</span>
+            <span>MarketWatch</span>
+          </div>
+        </div>
+        <div class="source-group">
+          <h4>Right-Leaning</h4>
+          <div class="source-logos">
+            <span>Fox News</span>
+            <span>Daily Wire</span>
+            <span>NY Post</span>
+            <span>Washington Examiner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview">
+    <div class="preview-container">
+      <h2 class="section-title">What You'll Get</h2>
+      <div class="preview-box">
+        <div class="preview-header">
+          <h3>THE PARALLAX</h3>
+          <p>Multiple angles. One picture.</p>
+        </div>
+        <div class="preview-story">
+          <h4>POLITICS</h4>
+          <p><strong>Federal Policy Shift Sparks Debate Across Party Lines</strong></p>
+          <p>A new policy announcement triggered responses from both sides of the aisle, with lawmakers citing different priorities and concerns...</p>
+          <p class="preview-perspectives">
+            <strong>Coverage breakdown:</strong> The Guardian frames this as... Fox News emphasizes... NPR reports...
+          </p>
+        </div>
+      </div>
+      <p class="preview-cta">
+        <a href="/archive/">Browse past issues →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Cut Through the Noise</h2>
+    <p>Get the full picture delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
 
   <footer>
     <div class="footer-links">
