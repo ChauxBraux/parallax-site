@@ -149,17 +149,19 @@
     }
     
     .nav-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 1px;
       transition: opacity 0.2s;
     }
     
     .nav-logo:hover {
       opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
     
     .nav-links {
@@ -400,6 +402,15 @@
       color: var(--text-light);
     }
     
+    .faq-answer-inner a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    
+    .faq-answer-inner a:hover {
+      text-decoration: underline;
+    }
+    
     /* CTA Section */
     .cta {
       padding: 60px 24px;
@@ -525,6 +536,10 @@
         gap: 24px;
       }
       
+      .nav-logo img {
+        height: 30px;
+      }
+      
       .content {
         padding: 48px 20px;
       }
@@ -547,8 +562,8 @@
         padding: 14px 16px;
       }
       
-      .nav-logo {
-        font-size: 1.3em;
+      .nav-logo img {
+        height: 26px;
       }
       
       .nav-links {
@@ -621,7 +636,9 @@
 <body>
   <nav>
     <div class="nav-container">
-      <a href="/" class="nav-logo">THE PARALLAX</a>
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
       <div class="nav-links">
         <a href="/about.html" class="active">About</a>
         <a href="/archive/">Archive</a>
@@ -755,3 +772,141 @@
     <h2 class="reveal">Questions?</h2>
     <p class="reveal">
       Reach out anytime at <a href="mailto:hello@readparallax.com">hello@readparallax.com</a>.
+    </p>
+  </main>
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title reveal">Frequently Asked Questions</h2>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">What is The Parallax?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The Parallax is a free daily newsletter that shows how the same news stories are covered across the political spectrum—from NPR to Fox News, The Guardian to Daily Wire. We help you see the full picture so you can form your own view.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">How much does it cost?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The Parallax is completely free. Just enter your email on our homepage to subscribe and receive the daily digest every morning.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">How do you decide which stories to include?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We only include stories that receive coverage from both left-leaning and right-leaning sources. This ensures every story in your digest shows multiple perspectives. Stories covered by only one side of the spectrum are excluded.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">Is The Parallax politically biased?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We strive to be as neutral as possible. Our balance requirement ensures every story includes perspectives from both sides. We don't editorialize or tell you which outlet is "right"—we simply show you how each side frames the same events.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">How often is The Parallax sent?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We send one digest every morning, seven days a week. Each issue covers the major stories from the previous day with balanced coverage from across the political spectrum.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item reveal">
+        <div class="faq-question">Can I read past issues?</div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes! All past issues are available in our <a href="/archive/">archive</a>. You can browse and read any previous edition at any time.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="reveal">See For Yourself</h2>
+    <p class="reveal">Get the full picture delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form reveal"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+
+  <script>
+    // Nav shadow on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+    
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 150;
+        
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        // Close other open items
+        faqItems.forEach(other => {
+          if (other !== item && other.classList.contains('open')) {
+            other.classList.remove('open');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
