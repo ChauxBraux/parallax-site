@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archive - The Parallax</title>
-  <meta name="description" content="Browse past issues of The Parallax daily news digest.">
+  <title>The Parallax - Multiple angles. One picture.</title>
+  <meta name="description" content="A daily news digest showing how the same stories are covered across the political spectrum. See multiple perspectives, form your own view.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -29,9 +29,6 @@
       color: var(--text);
       line-height: 1.6;
       background: var(--cream);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
       overflow-x: hidden;
     }
     
@@ -47,11 +44,23 @@
       }
     }
     
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
     .animate-fade-in-up {
       animation: fadeInUp 0.6s ease-out forwards;
     }
     
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
     .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+    .delay-4 { animation-delay: 0.4s; opacity: 0; }
     
     /* Navigation */
     nav {
@@ -115,114 +124,357 @@
       transition: width 0.3s ease;
     }
     
-    .nav-links a:hover,
-    .nav-links a.active {
+    .nav-links a:hover {
       color: var(--blue);
     }
     
-    .nav-links a.active::after,
     .nav-links a:hover::after {
       width: 100%;
     }
     
-    /* Page Header */
-    .page-header {
-      background: white;
-      padding: 60px 24px;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      color: white;
+      padding: 80px 24px;
       text-align: center;
-      border-bottom: 1px solid #e9ecef;
+      position: relative;
+      overflow: hidden;
     }
     
-    .page-header h1 {
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(69, 123, 157, 0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(69, 123, 157, 0.2) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2em, 6vw, 2.5em);
-      color: var(--navy);
-      margin-bottom: 12px;
+      font-size: clamp(2.2em, 8vw, 3.5em);
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
     }
     
-    .page-header p {
-      color: var(--text-light);
+    .hero .tagline {
+      font-size: clamp(1.1em, 4vw, 1.4em);
+      opacity: 0.9;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    
+    .hero .description {
+      max-width: 600px;
+      margin: 0 auto 40px;
       font-size: clamp(1em, 3vw, 1.1em);
+      opacity: 0.85;
+      line-height: 1.7;
+      padding: 0 16px;
     }
     
-    /* Archive List */
-    .archive-container {
-      max-width: 700px;
+    /* Signup Form */
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 0 16px;
+    }
+    
+    .signup-form input[type="email"] {
       flex: 1;
+      min-width: 200px;
+      padding: 16px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
     }
     
-    .archive-list {
-      list-style: none;
+    .signup-form input[type="email"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.4);
+      transform: translateY(-1px);
     }
     
-    .archive-list li {
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .signup-form input[type="submit"]:active {
+      transform: translateY(0);
+    }
+    
+    .signup-note {
+      margin-top: 16px;
+      font-size: 0.85em;
+      opacity: 0.7;
+    }
+    
+    /* How It Works */
+    .how-it-works {
+      padding: 80px 24px;
       background: white;
-      margin-bottom: 12px;
-      border-radius: 8px;
-      border: 1px solid #e9ecef;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.5s ease-out forwards;
     }
     
-    .archive-list li:nth-child(1) { animation-delay: 0.1s; }
-    .archive-list li:nth-child(2) { animation-delay: 0.15s; }
-    .archive-list li:nth-child(3) { animation-delay: 0.2s; }
-    .archive-list li:nth-child(4) { animation-delay: 0.25s; }
-    .archive-list li:nth-child(5) { animation-delay: 0.3s; }
-    .archive-list li:nth-child(6) { animation-delay: 0.35s; }
-    .archive-list li:nth-child(7) { animation-delay: 0.4s; }
-    .archive-list li:nth-child(8) { animation-delay: 0.45s; }
-    .archive-list li:nth-child(9) { animation-delay: 0.5s; }
-    .archive-list li:nth-child(10) { animation-delay: 0.55s; }
+    .section-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
     
-    .archive-list li:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6em, 5vw, 2em);
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--navy);
+    }
+    
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    
+    .step {
+      text-align: center;
+      padding: 32px 24px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .step:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+    
+    .step-number {
+      width: 56px;
+      height: 56px;
+      background: var(--navy);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      font-weight: 600;
+      margin: 0 auto 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .step:hover .step-number {
+      transform: scale(1.1);
+      background: var(--blue);
+    }
+    
+    .step h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3em;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+    
+    .step p {
+      color: var(--text-light);
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    
+    /* Sources Section */
+    .sources {
+      padding: 80px 24px;
+      background: var(--cream);
+    }
+    
+    .sources-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .source-group {
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .source-group h4 {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    
+    .source-logos {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .source-logos span {
+      font-size: 0.85em;
+      color: var(--text);
+      padding: 10px 16px;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid #e9ecef;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .source-logos span:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
       border-color: var(--blue);
     }
     
-    .archive-list a {
-      display: block;
-      padding: 20px 24px;
-      text-decoration: none;
-      color: var(--text);
+    /* Preview Section */
+    .preview {
+      padding: 80px 24px;
+      background: white;
     }
     
-    .archive-list .issue-date {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.1em, 3vw, 1.2em);
-      color: var(--navy);
-      margin-bottom: 4px;
-      transition: color 0.2s;
+    .preview-container {
+      max-width: 700px;
+      margin: 0 auto;
     }
     
-    .archive-list li:hover .issue-date {
-      color: var(--blue);
+    .preview-box {
+      background: var(--cream);
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      padding: 32px;
+      margin-top: 32px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    .archive-list .issue-preview {
-      font-size: clamp(0.85em, 2.5vw, 0.9em);
-      color: var(--text-light);
-      line-height: 1.5;
+    .preview-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
     }
     
-    .empty-state {
+    .preview-header {
       text-align: center;
-      padding: 60px 24px;
-      color: var(--text-light);
-    }
-    
-    .empty-state p {
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--navy);
       margin-bottom: 24px;
     }
     
-    .empty-state a {
+    .preview-header h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      color: var(--text);
+    }
+    
+    .preview-header p {
       color: var(--blue);
-      text-decoration: underline;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    
+    .preview-story h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--blue);
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
+    
+    .preview-story p {
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    
+    .preview-perspectives {
+      font-size: 0.85em;
+      color: var(--text-light);
+      font-style: italic;
+    }
+    
+    .preview-cta {
+      text-align: center;
+      margin-top: 32px;
+    }
+    
+    .preview-cta a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 0;
+      position: relative;
+      transition: color 0.2s;
+    }
+    
+    .preview-cta a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .preview-cta a:hover::after {
+      transform: scaleX(1);
+    }
+    
+    /* CTA Section */
+    .cta {
+      padding: 80px 24px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6em, 5vw, 2em);
+      margin-bottom: 16px;
+    }
+    
+    .cta p {
+      opacity: 0.85;
+      margin-bottom: 32px;
+      font-size: 1.1em;
     }
     
     /* Footer */
@@ -231,7 +483,6 @@
       color: white;
       padding: 40px 24px;
       text-align: center;
-      margin-top: auto;
     }
     
     .footer-links {
@@ -261,16 +512,36 @@
     
     /* Responsive */
     @media (max-width: 768px) {
-      .page-header {
-        padding: 48px 20px;
+      .hero {
+        padding: 60px 20px;
       }
       
       .nav-links {
         gap: 24px;
       }
       
-      .archive-container {
-        padding: 40px 20px;
+      .how-it-works,
+      .sources,
+      .preview,
+      .cta {
+        padding: 60px 20px;
+      }
+      
+      .steps {
+        gap: 24px;
+      }
+      
+      .step {
+        padding: 24px 20px;
+      }
+      
+      .source-group {
+        min-width: 100%;
+        margin-bottom: 16px;
+      }
+      
+      .preview-box {
+        padding: 24px 20px;
       }
     }
     
@@ -291,21 +562,47 @@
         font-size: 0.9em;
       }
       
-      .page-header {
-        padding: 40px 16px;
+      .hero {
+        padding: 48px 16px;
       }
       
-      .archive-container {
-        padding: 32px 16px;
+      .signup-form {
+        flex-direction: column;
+        padding: 0 8px;
       }
       
-      .archive-list a {
-        padding: 16px 20px;
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] {
+        width: 100%;
+        min-width: unset;
+      }
+      
+      .how-it-works,
+      .sources,
+      .preview,
+      .cta {
+        padding: 48px 16px;
+      }
+      
+      .section-title {
+        margin-bottom: 32px;
       }
       
       .footer-links {
         gap: 20px;
       }
+    }
+    
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -315,26 +612,124 @@
       <a href="/" class="nav-logo">THE PARALLAX</a>
       <div class="nav-links">
         <a href="/about.html">About</a>
-        <a href="/archive/" class="active">Archive</a>
+        <a href="/archive/">Archive</a>
       </div>
     </div>
   </nav>
 
-  <header class="page-header">
-    <h1 class="animate-fade-in-up">Archive</h1>
-    <p class="animate-fade-in-up delay-1">Browse past issues</p>
-  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="animate-fade-in-up">THE PARALLAX</h1>
+      <p class="tagline animate-fade-in-up delay-1">Multiple angles. One picture.</p>
+      <p class="description animate-fade-in-up delay-2">
+        Every morning, we show you how the same news stories are covered across the political spectrum—from NPR to Fox News, The Guardian to Daily Wire. See the full picture. Form your own view.
+      </p>
+      
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+        method="post"
+        class="signup-form animate-fade-in-up delay-3"
+      >
+        <input type="email" name="email" placeholder="you@email.com" required />
+        <input type="submit" value="Subscribe Free" />
+      </form>
+      <p class="signup-note animate-fade-in delay-4">Free daily digest. No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
 
-  <main class="archive-container">
-    <ul class="archive-list">
-      <li>
-        <a href="the-parallax---tuesday--january-27--2026.html">
-          <div class="issue-date">Tuesday, January 27, 2026</div>
-          <div class="issue-preview">Minneapolis ICE shooting, South Korea tariffs, Gaza ceasefire updates...</div>
-        </a>
-      </li>
-    </ul>
-  </main>
+  <section class="how-it-works">
+    <div class="section-container">
+      <h2 class="section-title reveal">How It Works</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-number">1</div>
+          <h3>We Aggregate</h3>
+          <p>Every day, we pull from 15 news sources across the political spectrum—left, right, and center.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">2</div>
+          <h3>AI Clusters</h3>
+          <p>Our AI identifies when multiple outlets cover the same story and groups them together.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-number">3</div>
+          <h3>You Compare</h3>
+          <p>Each story shows how different outlets frame the same events—so you see what each side emphasizes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sources">
+    <div class="section-container">
+      <h2 class="section-title reveal">Our Sources</h2>
+      <div class="sources-grid reveal">
+        <div class="source-group">
+          <h4>Left-Leaning</h4>
+          <div class="source-logos">
+            <span>NPR</span>
+            <span>The Guardian</span>
+            <span>Washington Post</span>
+            <span>Vox</span>
+          </div>
+        </div>
+        <div class="source-group">
+          <h4>Center</h4>
+          <div class="source-logos">
+            <span>BBC</span>
+            <span>Axios</span>
+            <span>Bloomberg</span>
+            <span>MarketWatch</span>
+          </div>
+        </div>
+        <div class="source-group">
+          <h4>Right-Leaning</h4>
+          <div class="source-logos">
+            <span>Fox News</span>
+            <span>Daily Wire</span>
+            <span>NY Post</span>
+            <span>Washington Examiner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview">
+    <div class="preview-container">
+      <h2 class="section-title reveal">What You'll Get</h2>
+      <div class="preview-box reveal">
+        <div class="preview-header">
+          <h3>THE PARALLAX</h3>
+          <p>Multiple angles. One picture.</p>
+        </div>
+        <div class="preview-story">
+          <h4>POLITICS</h4>
+          <p><strong>Federal Policy Shift Sparks Debate Across Party Lines</strong></p>
+          <p>A new policy announcement triggered responses from both sides of the aisle, with lawmakers citing different priorities and concerns...</p>
+          <p class="preview-perspectives">
+            <strong>Coverage breakdown:</strong> The Guardian frames this as... Fox News emphasizes... NPR reports...
+          </p>
+        </div>
+      </div>
+      <p class="preview-cta reveal">
+        <a href="/archive/">Browse past issues →</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="reveal">Cut Through the Noise</h2>
+    <p class="reveal">Get the full picture delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form reveal"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
 
   <footer>
     <div class="footer-links">
@@ -358,6 +753,24 @@
         nav.classList.remove('scrolled');
       }
     });
+    
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 150;
+        
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 </body>
 </html>
