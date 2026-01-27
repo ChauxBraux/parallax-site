@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archive - The Parallax</title>
   <meta name="description" content="Browse past issues of The Parallax daily news digest.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/archive/">
+  <meta property="og:title" content="Archive - The Parallax">
+  <meta property="og:description" content="Browse past issues of The Parallax daily news digest showing balanced coverage from across the political spectrum.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.readparallax.com/archive/">
+  <meta name="twitter:title" content="Archive - The Parallax">
+  <meta name="twitter:description" content="Browse past issues of The Parallax daily news digest showing balanced coverage from across the political spectrum.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
@@ -77,17 +93,19 @@
     }
     
     .nav-logo {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
       text-decoration: none;
-      letter-spacing: 1px;
       transition: opacity 0.2s;
     }
     
     .nav-logo:hover {
       opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
     
     .nav-links {
@@ -269,6 +287,10 @@
         gap: 24px;
       }
       
+      .nav-logo img {
+        height: 30px;
+      }
+      
       .archive-container {
         padding: 40px 20px;
       }
@@ -279,8 +301,8 @@
         padding: 14px 16px;
       }
       
-      .nav-logo {
-        font-size: 1.3em;
+      .nav-logo img {
+        height: 26px;
       }
       
       .nav-links {
@@ -312,7 +334,9 @@
 <body>
   <nav>
     <div class="nav-container">
-      <a href="/" class="nav-logo">THE PARALLAX</a>
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
       <div class="nav-links">
         <a href="/about.html">About</a>
         <a href="/archive/" class="active">Archive</a>
