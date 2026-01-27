@@ -1,0 +1,30 @@
+# The Parallax
+
+> A free daily newsletter that shows how the same news stories are covered across the political spectrum.
+
+The Parallax aggregates news from 15 sources across left, right, and center perspectives, then uses AI to cluster related stories and show how different outlets frame the same events.
+
+## Key Facts
+
+- Free daily email newsletter
+- 15 news sources across the political spectrum
+- AI-powered story clustering and synthesis
+- Every story includes both left-leaning and right-leaning coverage
+- Founded in Pittsburgh, PA
+- Subscribe at: https://www.readparallax.com
+
+## Sources
+
+Left-leaning: NPR, The Guardian, Washington Post, Vox
+Center: BBC, Axios, Bloomberg, MarketWatch, Al Jazeera
+Right-leaning: Fox News, Daily Wire, NY Post, Washington Examiner, Newsmax, Zero Hedge
+
+## Pages
+
+- Home: https://www.readparallax.com/
+- About: https://www.readparallax.com/about.html
+- Archive: https://www.readparallax.com/archive/
+
+## Contact
+
+Email: hello@readparallax.com
