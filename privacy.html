@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - The Parallax</title>
+  <meta name="description" content="Privacy policy for The Parallax newsletter - how we collect, use, and protect your information.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/privacy.html">
+  <meta property="og:title" content="Privacy Policy - The Parallax">
+  <meta property="og:description" content="Privacy policy for The Parallax newsletter.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+    
+    nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+      position: relative;
+      padding: 4px 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 60px 24px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2em, 6vw, 2.5em);
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    
+    .page-header p {
+      color: var(--text-light);
+      font-size: clamp(1em, 3vw, 1.1em);
+    }
+    
+    /* Content */
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      flex: 1;
+    }
+    
+    .content h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.3em, 4vw, 1.5em);
+      color: var(--navy);
+      margin-bottom: 16px;
+      margin-top: 40px;
+    }
+    
+    .content h2:first-child {
+      margin-top: 0;
+    }
+    
+    .content p {
+      margin-bottom: 16px;
+      font-size: clamp(1em, 3vw, 1.05em);
+      line-height: 1.8;
+    }
+    
+    .content ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    
+    .content li {
+      margin-bottom: 8px;
+      font-size: clamp(1em, 3vw, 1.05em);
+      line-height: 1.7;
+    }
+    
+    .content a {
+      color: var(--blue);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .content a:hover {
+      text-decoration: underline;
+    }
+    
+    .content strong {
+      color: var(--navy);
+    }
+    
+    .last-updated {
+      background: white;
+      border-left: 4px solid var(--blue);
+      padding: 16px 20px;
+      margin-bottom: 32px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95em;
+      color: var(--text-light);
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 48px 20px;
+      }
+      
+      .nav-links {
+        gap: 24px;
+      }
+      
+      .nav-logo img {
+        height: 30px;
+      }
+      
+      .content {
+        padding: 48px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 16px;
+      }
+      
+      .nav-logo img {
+        height: 26px;
+      }
+      
+      .nav-links {
+        gap: 16px;
+      }
+      
+      .nav-links a {
+        font-size: 0.9em;
+      }
+      
+      .page-header {
+        padding: 40px 16px;
+      }
+      
+      .content {
+        padding: 40px 16px;
+      }
+      
+      .footer-links {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>Privacy Policy</h1>
+    <p>How we handle your information</p>
+  </header>
+
+  <main class="content">
+    <div class="last-updated">
+      <strong>Last updated:</strong> January 27, 2026
+    </div>
+
+    <h2>The Short Version</h2>
+    <p>
+      We collect your email address to send you our newsletter. We use privacy-friendly analytics to understand how people use our site. We don't sell your data, we don't track you across the web, and we don't show ads.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <p><strong>Email Address:</strong> When you subscribe to The Parallax, we collect your email address. This is the only personal information we ask for.</p>
+    <p><strong>Analytics Data:</strong> We use Cloudflare Web Analytics to understand how visitors use our website. This includes:</p>
+    <ul>
+      <li>Pages visited</li>
+      <li>Referring websites</li>
+      <li>Country (based on IP, which is not stored)</li>
+      <li>Device type and browser</li>
+    </ul>
+    <p>Cloudflare Web Analytics is privacy-friendly: it doesn't use cookies, doesn't track users across sites, and doesn't collect personal information.</p>
+
+    <h2>How We Use Your Information</h2>
+    <p><strong>Email:</strong> We use your email address solely to send you The Parallax daily newsletter. We may occasionally send important updates about the service (like significant changes to how it works), but we won't spam you with promotions.</p>
+    <p><strong>Analytics:</strong> We use aggregated analytics data to understand which content resonates with readers and to improve the website experience.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>We use the following services to operate The Parallax:</p>
+    <ul>
+      <li><strong>Buttondown</strong> — Email delivery and subscriber management. <a href="https://buttondown.email/privacy" target="_blank" rel="noopener">Their privacy policy</a></li>
+      <li><strong>Cloudflare</strong> — Website hosting and analytics. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Their privacy policy</a></li>
+      <li><strong>Google Fonts</strong> — Typography. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Their privacy policy</a></li>
+    </ul>
+
+    <h2>Cookies</h2>
+    <p>The Parallax website does not use cookies for tracking or advertising. Cloudflare may use essential cookies for security purposes (like DDoS protection), but these don't track your browsing activity.</p>
+
+    <h2>Data Retention</h2>
+    <p>We retain your email address for as long as you remain subscribed to the newsletter. If you unsubscribe, your email is removed from our mailing list. Analytics data is aggregated and does not contain personal information.</p>
+
+    <h2>Your Rights</h2>
+    <p>You can:</p>
+    <ul>
+      <li><strong>Unsubscribe</strong> at any time using the link at the bottom of any email</li>
+      <li><strong>Request deletion</strong> of your email address by contacting us</li>
+      <li><strong>Ask questions</strong> about how we handle your data</li>
+    </ul>
+
+    <h2>Data Security</h2>
+    <p>Our website is served over HTTPS, encrypting data in transit. We use reputable third-party services (Buttondown, Cloudflare) that maintain their own security practices and compliance standards.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>The Parallax is not directed at children under 13. We do not knowingly collect information from children under 13.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we make significant changes to this privacy policy, we'll note the update date at the top of this page. For major changes, we may notify subscribers via email.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Email us at <a href="mailto:hello@readparallax.com">hello@readparallax.com</a>.</p>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+  
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR-TOKEN-HERE"}'></script>
+</body>
+</html>
