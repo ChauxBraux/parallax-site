@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Parallax - Thursday, January 29, 2026</title>
+  <meta name="description" content="The Parallax daily digest for Thursday, January 29, 2026 - balanced news coverage from across the political spectrum.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.readparallax.com/archive/the-parallax---thursday--january-29--2026.html">
+  <meta property="og:title" content="The Parallax - Thursday, January 29, 2026">
+  <meta property="og:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Parallax - Thursday, January 29, 2026">
+  <meta name="twitter:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 48px 24px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8em, 5vw, 2.2em);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .page-header .date {
+      color: var(--blue);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    
+    .back-link {
+      margin-top: 16px;
+    }
+    
+    .back-link a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .back-link a:hover {
+      color: var(--blue);
+    }
+    
+    /* Article Content */
+    .article-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      flex: 1;
+    }
+    
+    .article-content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    /* Override email styles */
+    .article-content table {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    
+    .article-content td {
+      padding: 0 !important;
+    }
+    
+    .article-content h1,
+    .article-content h2,
+    .article-content h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .article-content h1:first-child,
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+    
+    .article-content h2 {
+      font-size: 1.4em;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--light-blue);
+    }
+    
+    .article-content h3 {
+      font-size: 1.2em;
+      color: var(--blue);
+    }
+    
+    .article-content p {
+      margin-bottom: 16px;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+    
+    .article-content a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+    
+    .article-content hr {
+      border: none;
+      border-top: 1px solid #e9ecef;
+      margin: 32px 0;
+    }
+    
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    
+    .article-content li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: var(--navy);
+    }
+    
+    .article-content em {
+      color: var(--text-light);
+    }
+    
+    .article-content blockquote {
+      border-left: 4px solid var(--blue);
+      padding-left: 20px;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+    
+    /* Audio Player */
+    .audio-player audio {
+      width: 100%;
+    }
+    
+    .audio-player audio::-webkit-media-controls-panel {
+      background: white;
+    }
+    
+    /* CTA Section */
+    .subscribe-cta {
+      background: var(--navy);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .subscribe-cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6em;
+      margin-bottom: 12px;
+    }
+    
+    .subscribe-cta p {
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+    
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 24px;
+      }
+      
+      .nav-logo img {
+        height: 30px;
+      }
+      
+      .page-header {
+        padding: 40px 20px;
+      }
+      
+      .article-container {
+        padding: 32px 16px;
+      }
+      
+      .article-content {
+        padding: 24px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 16px;
+      }
+      
+      .nav-logo img {
+        height: 26px;
+      }
+      
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9em;
+      }
+      
+      .signup-form {
+        flex-direction: column;
+      }
+      
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>The Parallax</h1>
+    <p class="date">Thursday, January 29, 2026</p>
+    <p class="back-link"><a href="/archive/">← Back to Archive</a></p>
+  </header>
+
+  <main class="article-container">
+    <article class="article-content">
+      
+  <div style="background: #f8f9fa; border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; border: 1px solid #e9ecef;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+      <span style="font-size: 1.4em;">🎧</span>
+      <span style="font-weight: 600; color: #1d3557;">Listen to today's edition</span>
+    </div>
+    <audio controls style="width: 100%;" preload="metadata">
+      <source src="https://audio.readparallax.com/2026-01-29.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+  <title>The Parallax - Thursday, January 29, 2026</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        padding: 16px !important;
+      }
+      .header-title {
+        font-size: 2em !important;
+      }
+      h2 {
+        font-size: 1.3em !important;
+      }
+      h3 {
+        font-size: 1.1em !important;
+      }
+      p, li {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+      }
+      ul {
+        padding-left: 16px !important;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .email-container {
+        padding: 12px !important;
+      }
+      .header-title {
+        font-size: 1.75em !important;
+        letter-spacing: 1px !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+  
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f5f5f5;">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+        
+        <table role="presentation" class="email-container" width="680" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; max-width: 680px; width: 100%; font-family: Georgia, 'Times New Roman', serif; color: #1a1a1a;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 24px 24px 24px; text-align: center; border-bottom: 3px solid #1d3557;">
+              <h1 class="header-title" style="font-size: 2.5em; margin: 0; letter-spacing: 2px; color: #1a1a1a;">THE PARALLAX</h1>
+              <p style="color: #457b9d; margin: 8px 0 0 0; font-style: italic; font-size: 1em;">Multiple angles. One picture.</p>
+              <p style="color: #6c757d; font-size: 0.9em; margin-top: 6px;">Thursday, January 29, 2026</p>
+            </td>
+          </tr>
+          
+          <!-- Audio Link -->
+          <tr>
+            <td style="padding: 16px 24px; text-align: center; background-color: #f8f9fa; border-bottom: 1px solid #e9ecef;">
+              <a href="https://audio.readparallax.com/2026-01-29.mp3" style="color: #1d3557; text-decoration: none; font-size: 1em;">
+                🎧 <span style="text-decoration: underline;">Listen to today's edition</span> <span style="color: #6c757d; font-size: 0.9em;">(8 min)</span>
+              </a>
+            </td>
+          </tr>
+          
+          <!-- Main Content -->
+          <tr>
+            <td style="padding: 24px; line-height: 1.7;">
+              <h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">POLITICS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fatal ICE Shooting in Minneapolis Escalates Tensions Between Trump Administration and Local Officials</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Alex Pretti, a 37-year-old intensive care nurse, was fatally shot by federal immigration agents during enforcement operations in Minneapolis on January 24, marking the second death from ICE actions in the city within weeks. Video evidence emerged showing Pretti had confronted immigration agents 11 days before his death, apparently spitting at officers and damaging their vehicle. Two agents involved in the fatal shooting were placed on administrative leave, and Border Czar Tom Homan was dispatched to Minneapolis in an apparent de-escalation effort that lasted less than 48 hours before Trump resumed attacks on local officials via social media. The incident has triggered intense partisan conflict over immigration enforcement tactics, with Senate Democrats demanding body cameras, mask restrictions, and warrant limitations on ICE agents as conditions for funding the Department of Homeland Security ahead of a potential Friday government shutdown.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: The Guardian and BBC emphasize the pattern of escalation—framing Pretti's death as emblematic of what they present as overly aggressive enforcement tactics that have drawn scrutiny from federal judges and local officials. They highlight court rulings blocking refugee detention and judicial rebukes of ICE's alleged pattern of ignoring court orders. Fox News and Newsmax focus on Pretti's prior confrontation with agents, using the newly released video to contextualize the shooting as occurring during an altercation rather than a random encounter. They also emphasize the White House's attempt to manage the political fallout through Homan's visit and Trump's public messaging about de-escalation. Axios presents the story as a political crisis for the Trump administration—documenting how the brief de-escalation strategy unraveled when Trump resumed his attacks, creating a "vibecession" effect among Republicans worried about their electoral prospects. Washington Examiner and Washington Post report on Democratic demands for ICE reforms and the shutdown standoff, while also covering Trump's defense of Homan and his dismissal of Republican senators calling for Noem's removal as "losers."</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Federal Education Department Finds California Violated Parents' Rights Over Student Gender Transitions</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">The Trump administration's Department of Education concluded that California schools violated the Family Educational Rights and Privacy Act (FERPA) by pressuring school officials to conceal information about students' gender identity transitions from their parents. The investigation found that the California Department of Education implemented policies requiring districts to withhold such information without parental consent, affecting an unknown number of students across the state. The ruling marks a significant policy reversal from the Biden administration and sets up potential legal confrontations between the federal government and California over education practices.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: Fox News and the Washington Examiner present this as a vindication of parental rights, framing the story around the principle that parents should have access to information about their children's welfare. The Daily Wire emphasizes this as one of multiple instances where the Trump administration is challenging what it characterizes as California's ideological approach to education. The outlets stress the federal law violation and position the ruling as restoring transparency. By contrast, outlets like the Guardian and Washington Post (when covering education policy shifts) typically contextualize such rulings within debates over LGBTQ+ youth protections and the tension between parental involvement and student privacy. The framing difference is stark: right-leaning outlets emphasize parental transparency and federal enforcement of existing law, while center and left outlets would likely focus on potential harms to vulnerable students and the conflict between federal and state authority over education.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Trump Nominates Colin McDonald to Lead New DOJ Fraud Enforcement Division</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump announced the nomination of Colin McDonald, a veteran federal prosecutor, to lead the Department of Justice's newly created National Fraud Enforcement Division, designed to aggressively target large-scale fraud in federal programs. The new division represents Trump's stated priority of combating what his administration characterizes as widespread waste and abuse in government spending. McDonald's appointment comes as Trump has made fraud enforcement a centerpiece of his second term agenda.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: Fox News, Newsmax, and the Washington Examiner treat this as a significant enforcement action, emphasizing Trump's commitment to holding fraudsters accountable and improving government efficiency. They present McDonald's background as a "seasoned federal prosecutor" and frame the division as a necessary response to systemic abuse. These outlets align the announcement with Trump's broader narrative about cleaning up government waste. Center outlets like Axios might emphasize the institutional implications and the political messaging around efficiency, while left-leaning outlets would likely focus on whether such enforcement disproportionately affects lower-income benefit recipients or note any conflicts with civil liberties concerns—though this story has limited cross-spectrum coverage to warrant full treatment in this digest.</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">WORLD</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Iran-US Military Tensions Escalate as Trump Threatens Strikes Over Nuclear Program</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump warned Iran that "time is running out" for nuclear negotiations and threatened military strikes "far worse" than a previous attack, as the U.S. military conducted a significant buildup in the Persian Gulf with the USS Abraham Lincoln carrier strike group. Trump stated that Iran must "quickly make a deal" on its nuclear program or face consequences, while Iran's military warned it was ready "with their fingers on the trigger" to respond to any aggression. The escalating rhetoric has driven commodity markets, with Brent crude hitting $70 per barrel for the first time since September, gold surging past $5,500, and China warning against U.S. "military adventurism" in the region.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: BBC, Al Jazeera, and the Guardian provide detailed scenario analysis of potential military outcomes, from regime change to regional retaliation, framing the situation as a dangerous escalation with unpredictable consequences. They emphasize Trump's whiplash-inducing reversals over the past month—initially threatening strikes if protesters were harmed, then shifting to nuclear demands—and question the coherence of U.S. strategy. Al Jazeera also covers China's formal warning against military action, contextualizing the crisis within broader geopolitical realignment. Bloomberg and MarketWatch focus on the market implications—oil prices, gold surges, and currency volatility—presenting the story as a risk event affecting global markets. Newsmax and Zero Hedge frame Trump's position as a necessary red line to prevent Iranian nuclear weapons development, with Newsmax quoting U.S. Ambassador to NATO Matt Whitaker on Trump's "very clear red line," and Zero Hedge citing Secretary of State Rubio's emphasis on preemptive prevention of Iranian attacks. The framing difference is clear: left and center outlets emphasize unpredictability and regional risk; right outlets emphasize nuclear deterrence and resolve.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>British PM Keir Starmer Visits China, Signals Pivot Toward Closer Economic Ties Amid Trump Trade Friction</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">British Prime Minister Keir Starmer met with Chinese leader Xi Jinping in Beijing, the first such visit by a UK prime minister in eight years, to discuss a "comprehensive strategic partnership" and deepen economic ties. The visit signals a thaw in UK-China relations and comes amid broader global realignment as U.S. allies reassess their trade dependencies in light of Trump administration tariffs and protectionist rhetoric. The meeting represents part of a larger trend of world leaders seeking stronger ties with China as alternatives to U.S. economic engagement.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: NPR, BBC, and Al Jazeera frame this as part of a strategic rebalancing, noting that allies are "edging towards China" due to Trump's tariffs and "America First" policies. They emphasize the symbolic importance of the visit—Starmer's first trip abroad as PM was to the U.S., making the China trip significant—and contextualize it within younger generations' shifting views of American exceptionalism. Bloomberg coverage focuses on commercial and investment implications, while outlets like Fox News (limited coverage on this particular story) would likely emphasize security concerns or the risks of closer UK-China cooperation. The story qualifies as cross-spectrum due to coverage from left-lean (NPR, BBC), center (Bloomberg), and right-lean outlets' broader reporting on allied trade shifts, though specific framing of this China visit has more left-center emphasis.</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">MARKET SIGNALS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Copper Hits Record High as China Metals Demand Soars; Gold Surges Above $5,500</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Copper surged to an all-time high above $14,000 per ton, posting its largest single-day gain in more than 16 years, driven by intense speculative trading in China amid expectations of economic stimulus and infrastructure investment. Gold simultaneously hit a record above $5,500 per ounce, extending a rally fueled by Iran tensions, a weakening U.S. dollar, and safe-haven demand. The moves reflect broader commodity market fervor driven by Chinese demand and geopolitical risk premiums.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: Bloomberg and MarketWatch provide technical analysis and market mechanics—explaining the speculative dynamics in China, the dollar's depreciation, and how AI-driven demand for copper (used in semiconductors and infrastructure) intersects with macro uncertainty. They present the moves as rational responses to supply constraints and demand signals. Zero Hedge frames the same story through a macro skepticism lens, emphasizing speculative excess and potential bubble dynamics, while also noting the geopolitical risk premium. Al Jazeera's coverage of gold emphasizes the macroeconomic instability—elevated inflation, currency volatility, and conflict risks—that traditional safe havens capitalize on. The difference: Bloomberg/MarketWatch focus on fundamentals and market structure; Zero Hedge emphasizes excess and instability; Al Jazeera contextualizes within broader economic pressures.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>S&P 500 Touches 7,000 for First Time as Tech Megacaps Drive Market Despite AI Spending Concerns</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">The S&P 500 index reached 7,000 for the first time in history before pulling back, driven primarily by technology giants continuing their 2026 rally despite investor concerns about whether artificial intelligence spending will generate commensurate returns. Companies like Meta and Microsoft have announced massive capex increases to build AI infrastructure, leading to mixed market reactions as investors weigh growth potential against near-term margin pressure. The milestone reflects the concentration of gains in a narrow set of stocks.</p>
+<p style="margin-top: 16px; margin-bottom: 8px; font-weight: 600; color: #457b9d; font-size: 0.95em;">Coverage breakdown: Bloomberg and MarketWatch provide detailed earnings analysis, discussing how Meta's stock jumped despite soaring capital expenditures, and Microsoft faced criticism for cloud business momentum not matching AI spending levels. They examine the tension between investor enthusiasm for AI potential and skepticism about ROI timelines. Zero Hedge emphasizes the speculative nature of the rally, the narrow breadth of gains concentrated in megacaps, and risks of a correction if AI monetization disappoints. Axios coverage of the job market for high earners notes the "vibecession" dynamic—economic anxiety among upper-middle-class professionals despite market highs. The framing difference: mainstream financial outlets focus on earnings fundamentals and valuations; skeptical outlets emphasize concentration risk and potential bubble dynamics.</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">BRIEFLY</h2>
+<ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Nvidia CEO says China has not yet ordered H200 AI chips as Beijing deliberates import allowance:</strong> Jensen Huang stated that no orders have been placed while Chinese authorities decide whether to permit imports of the advanced chips. (Bloomberg)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>AT&T adds 283,000 fiber subscribers and 421,000 postpaid phone customers in latest quarter, lifting stock:</strong> The telecom giant showed strong momentum in its push for "convergence" of connectivity offerings. (MarketWatch)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Starbucks posts second straight quarter of same-store sales growth as turnaround takes shape:</strong> The coffee chain's recovery strategy appears to be gaining traction after months of underperformance. (MarketWatch)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Federal Reserve holds interest rates steady at 3.5%-3.75% range, resisting Trump pressure to cut:</strong> The central bank paused rate cuts to assess inflation and labor market conditions despite White House pressure. (Guardian, NPR)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Wisconsin group running ads against GOP congressmen linked to Democrat-aligned dark money fund North Fund:</strong> Opportunity Wisconsin maintains it is a "coalition of residents," but corporate records show it operates as a trade name of the larger dark money organization. (Washington Examiner)</li>
+</ul>
+            </td>
+          </tr>
+        </table>       
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>
+
+    </article>
+  </main>
+
+  <section class="subscribe-cta">
+    <h2>Get The Parallax Daily</h2>
+    <p>Balanced news coverage delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+</body>
+</html>
