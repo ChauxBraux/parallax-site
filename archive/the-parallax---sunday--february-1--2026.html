@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Parallax - Sunday, February 1, 2026</title>
+  <meta name="description" content="The Parallax daily digest for Sunday, February 1, 2026 - balanced news coverage from across the political spectrum.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.readparallax.com/archive/the-parallax---sunday--february-1--2026.html">
+  <meta property="og:title" content="The Parallax - Sunday, February 1, 2026">
+  <meta property="og:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Parallax - Sunday, February 1, 2026">
+  <meta name="twitter:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 48px 24px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8em, 5vw, 2.2em);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .page-header .date {
+      color: var(--blue);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    
+    .back-link {
+      margin-top: 16px;
+    }
+    
+    .back-link a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .back-link a:hover {
+      color: var(--blue);
+    }
+    
+    /* Article Content */
+    .article-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      flex: 1;
+    }
+    
+    .article-content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    /* Override email styles */
+    .article-content table {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    
+    .article-content td {
+      padding: 0 !important;
+    }
+    
+    .article-content h1,
+    .article-content h2,
+    .article-content h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .article-content h1:first-child,
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+    
+    .article-content h2 {
+      font-size: 1.4em;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--light-blue);
+    }
+    
+    .article-content h3 {
+      font-size: 1.2em;
+      color: var(--blue);
+    }
+    
+    .article-content p {
+      margin-bottom: 16px;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+    
+    .article-content a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+    
+    .article-content hr {
+      border: none;
+      border-top: 1px solid #e9ecef;
+      margin: 32px 0;
+    }
+    
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    
+    .article-content li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: var(--navy);
+    }
+    
+    .article-content em {
+      color: var(--text-light);
+    }
+    
+    .article-content blockquote {
+      border-left: 4px solid var(--blue);
+      padding-left: 20px;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+    
+    /* Audio Player */
+    .audio-player audio {
+      width: 100%;
+    }
+    
+    .audio-player audio::-webkit-media-controls-panel {
+      background: white;
+    }
+    
+    /* CTA Section */
+    .subscribe-cta {
+      background: var(--navy);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .subscribe-cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6em;
+      margin-bottom: 12px;
+    }
+    
+    .subscribe-cta p {
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+    
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 24px;
+      }
+      
+      .nav-logo img {
+        height: 30px;
+      }
+      
+      .page-header {
+        padding: 40px 20px;
+      }
+      
+      .article-container {
+        padding: 32px 16px;
+      }
+      
+      .article-content {
+        padding: 24px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 16px;
+      }
+      
+      .nav-logo img {
+        height: 26px;
+      }
+      
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9em;
+      }
+      
+      .signup-form {
+        flex-direction: column;
+      }
+      
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>The Parallax</h1>
+    <p class="date">Sunday, February 1, 2026</p>
+    <p class="back-link"><a href="/archive/">← Back to Archive</a></p>
+  </header>
+
+  <main class="article-container">
+    <article class="article-content">
+      
+  <div style="background: #f8f9fa; border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; border: 1px solid #e9ecef;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+      <span style="font-size: 1.4em;">🎧</span>
+      <span style="font-weight: 600; color: #1d3557;">Listen to today's edition</span>
+    </div>
+    <audio controls style="width: 100%;" preload="metadata">
+      <source src="https://audio.readparallax.com/2026-02-01.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+  <title>The Parallax - Sunday, February 1, 2026</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        padding: 16px !important;
+      }
+      .header-title {
+        font-size: 2em !important;
+      }
+      h2 {
+        font-size: 1.3em !important;
+      }
+      h3 {
+        font-size: 1.1em !important;
+      }
+      p, li {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+      }
+      ul {
+        padding-left: 16px !important;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .email-container {
+        padding: 12px !important;
+      }
+      .header-title {
+        font-size: 1.75em !important;
+        letter-spacing: 1px !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+  
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f5f5f5;">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+        
+        <table role="presentation" class="email-container" width="680" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; max-width: 680px; width: 100%; font-family: Georgia, 'Times New Roman', serif; color: #1a1a1a;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 24px 24px 24px; text-align: center; border-bottom: 3px solid #1d3557;">
+              <h1 class="header-title" style="font-size: 2.5em; margin: 0; letter-spacing: 2px; color: #1a1a1a;">THE PARALLAX</h1>
+              <p style="color: #457b9d; margin: 8px 0 0 0; font-style: italic; font-size: 1em;">Multiple angles. One picture.</p>
+              <p style="color: #6c757d; font-size: 0.9em; margin-top: 6px;">Sunday, February 1, 2026</p>
+            </td>
+          </tr>
+          
+          <!-- Audio Link -->
+          <tr>
+            <td style="padding: 16px 24px; text-align: center; background-color: #f8f9fa; border-bottom: 1px solid #e9ecef;">
+              <a href="https://audio.readparallax.com/2026-02-01.mp3" style="color: #1d3557; text-decoration: none; font-size: 1em;">
+                🎧 <span style="text-decoration: underline;">Listen to today's edition</span> <span style="color: #6c757d; font-size: 0.9em;">(8 min)</span>
+              </a>
+            </td>
+          </tr>
+          
+          <!-- Main Content -->
+          <tr>
+            <td style="padding: 24px; line-height: 1.7;">
+              <h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">POLITICS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Federal Judge Denies Minnesota's Bid to Block Immigration Surge Despite Two Deaths</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">A federal judge on Saturday rejected Minnesota's emergency request to halt "Operation Metro Surge," the Trump administration's large-scale immigration enforcement deployment in Minneapolis that has resulted in two fatalities. U.S. District Judge Katherine Menendez ruled that the state, Minneapolis, and St. Paul failed to meet the legal threshold for an injunction, finding insufficient grounds to block the operation despite nationwide protests and mounting accusations of excessive force. The decision comes days after Minneapolis nurse Alex Pretti, 37, was shot and killed by federal agents during an enforcement action, marking the second death from ICE operations in the city within weeks.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> emphasizes the pattern of escalation and casualties, framing the judge's decision as a judicial green light for enforcement tactics that have drawn scrutiny from civil rights advocates and sparked weeks of sustained protests. The ruling is presented as a setback for state officials who argue federal agents are operating with insufficient oversight. ([link](<a href="https://www.theguardian.com/us-news/2026/jan/31/judge-denies-minnesota-request-ice-surge" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fox News</strong> highlights the Trump administration's narrative of success, reporting that the judge's decision validates the operation's effectiveness, with federal authorities touting thousands of arrests as proof the surge is working as intended. The coverage emphasizes Trump's instruction that ICE focus on protecting federal property and avoiding intervention in Democratic-led cities unless requested. ([link](<a href="https://www.foxnews.com/politics/federal-judge-orders-trump-admin-release-5-year-old-his-dad-immigration-detention-within-3-days" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Axios</strong> frames the ruling as a political victory for the administration while documenting the broader collision between federal and local authorities, presenting the judge's decision alongside reporting on Chicago Mayor Brandon Johnson's countervailing executive order directing police to investigate and document alleged ICE misconduct. ([link](<a href="https://www.axios.com/2026/01/31/ice-trump-alex-pretti-minneapolis-shooting" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Federal Judge Orders Release of 5-Year-Old Liam Ramos From ICE Detention</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">A federal judge on Friday ordered the Trump administration to release 5-year-old Liam Conejo Ramos and his father, Adrian Alexander Conejo Arias, from immigration detention within three days, declaring the child's detention "traumatizing" and citing "ill-conceived and incompetently-implemented" deportation quotas. The order came after national outcry following images of the child in a Spider-Man backpack and bright blue bunny-shaped hat being taken into custody during Minneapolis ICE operations. The case has become a focal point in the broader debate over immigration enforcement tactics under the Trump administration.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>NPR</strong> emphasizes the humanitarian dimension and judicial rebuke of enforcement procedures, reporting that the judge's language—describing the detention as traumatizing and the quotas as incompetent—signals judicial concern about how federal agents are executing their mandate. The coverage highlights the child's age and the visual evidence that galvanized public attention. ([link](<a href="https://www.npr.org/2026/01/31/g-s1-108168/5-year-old-liam-ramos-ice-order" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fox News</strong> focuses on the judicial compromise, presenting the order as a narrow ruling about procedures rather than a rejection of immigration enforcement itself, noting that the judge found legal grounds to release the child without blocking the broader operation or criticizing the administration's enforcement strategy. ([link](<a href="https://www.foxnews.com/politics/federal-judge-orders-trump-admin-release-5-year-old-his-dad-immigration-detention-within-3-days" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Washington Examiner</strong> frames the order as a setback for the administration's immigration crackdown while reporting on the judge's specific findings about detention procedures, presenting the ruling as part of a broader legal pushback from the judiciary even as other courts have declined to halt enforcement operations entirely. ([link](<a href="https://www.washingtonexaminer.com/policy/immigration/4442165/judge-orders-release-5-year-old-ice-detention/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Trump Orders DHS to Avoid Federal Intervention in Democratic-Led Cities Unless Requested</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump instructed Homeland Security Secretary Kristi Noem on Saturday to refrain from federal intervention in protests occurring in cities led by Democrats unless local officials explicitly request assistance, while simultaneously ordering ICE and Border Patrol to be "very forceful" in protecting federal property. The directive comes amid intense anti-ICE protests in Minneapolis, Los Angeles, and other Democratic-controlled cities, and represents an effort to shift responsibility for managing civil unrest to local authorities while maintaining aggressive federal enforcement at federal installations. Trump warned that federal agents would face "consequences" for attacks on federal property.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> frames the order as a political calculation and potential abdication of federal responsibility, suggesting Trump is creating conditions where Democratic cities bear the burden of civil disorder while federal forces maintain maximum aggression at federal sites. The coverage emphasizes the contrast between Trump's refusal to help Democratic cities and his commitment to protecting federal interests. ([link](<a href="https://www.theguardian.com/us-news/2026/feb/01/trump-administration-news-updates" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fox News</strong> presents the directive as Trump reasserting executive authority and drawing clear lines about federal role, framing it as the president holding cities accountable for their own security while ensuring federal installations remain protected. The coverage emphasizes Trump's warning about consequences for attacks on federal property. ([link](<a href="https://www.foxnews.com/politics/trump-vows-not-help-blue-cities-riots-instructs-ice-border-patrol-protect-federal-property" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Al Jazeera</strong> contextualizes the order within the broader escalation of immigration enforcement tensions, presenting it as part of the administration's hardline posture while acknowledging the political dimensions of the directive and its implications for federal-local relations during periods of civil unrest. ([link](<a href="https://www.aljazeera.com/news/2026/2/1/trump-orders-federal-agents-to-stay-away-from-protests-in-democrat-cities?traffic_source=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">WORLD</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Trump Says Iran 'Seriously Talking' as Military Escalation Looms</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump announced Saturday that Iran is engaged in serious diplomatic discussions with the United States, even as the Pentagon moved additional military assets into the region ahead of a potential strike and Iran prepared live-fire naval exercises in the Strait of Hormuz. Trump told Gulf allies that he was keeping military options on the table while signaling willingness to explore a nuclear deal, though White House officials indicated Trump has not made a final decision on military action. The administration has not informed Saudi Arabia or other Gulf partners of specific military plans, according to Trump's own statements.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>BBC</strong> reports the diplomatic signals alongside the military buildup with measured skepticism, presenting both the talks and the military preparations as simultaneous tracks that could collapse into conflict at any moment. The coverage emphasizes Iran's warning about live-fire drills and the potential for accidental escalation. ([link](<a href="https://www.bbc.com/news/articles/cx20z5nv9jxo?at_medium=RSS&at_campaign=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fox News</strong> emphasizes Trump's control of the situation and his ability to maintain diplomatic optionality while preserving military readiness, framing the talks as evidence of Trump's negotiating leverage and presenting the military posture as credible deterrence rather than preparation for imminent action. ([link](<a href="https://www.foxnews.com/politics/trump-says-iran-seriously-talking-us-military-ships-head-middle-east" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Zero Hedge</strong> presents the talks skeptically, emphasizing the uncertainty about outcomes and suggesting that Trump's psychology and desire for dominance could override diplomatic progress at any moment, while noting that the live-fire exercises represent genuine escalation risk regardless of diplomatic progress. ([link](<a href="https://www.zerohedge.com/geopolitical/will-he-wont-he-taco-iran" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Israel-Hamas Ceasefire Resumes Border Operations as Tensions Simmer</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">The Rafah border crossing between Gaza and Egypt, which had been nearly closed for nearly two years, partially reopened Saturday under an Israel-Hamas ceasefire agreement, allowing limited movement of people as a security trial. However, Israeli airstrikes killed at least 32 Palestinians on the same day, with both sides accusing each other of violating the ceasefire agreement. The opening of the crossing represents a critical early test of whether the ceasefire framework can hold amid mutual accusations of breaches.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>NPR</strong> frames the crossing reopening as a pivotal humanitarian step forward while documenting the simultaneous killings, presenting both developments as evidence that the ceasefire is fragile and contested. The coverage emphasizes the importance of the crossing for humanitarian assistance. ([link](<a href="https://www.npr.org/2026/02/01/nx-s1-5695694/gaza-border-rafah-closure" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Al Jazeera</strong> reports the crossing reopening and airstrikes with attention to the mutual accusations, presenting the ceasefire as immediately tested by competing claims about violations and maintaining focus on the humanitarian dimensions of border access. ([link](<a href="https://www.aljazeera.com/news/liveblog/2026/2/1/live-israel-to-partially-open-rafah-in-gaza-as-dozens-killed-in-attacks?traffic_source=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>LA Olympics Chief Says He 'Deeply Regrets' Emails With Ghislaine Maxwell</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Casey Wasserman, head of the Los Angeles Olympic organizing committee, issued a statement Saturday expressing deep regret over flirty emails from 2003 between himself and convicted sex trafficker Ghislaine Maxwell, among 3.5 million pages of newly released Jeffrey Epstein-related files. The emails included Wasserman writing "I think of you all the time. So, what do I have to do to see you in a..." before being cut off in the released documents. Wasserman's statement came hours after the Justice Department released the massive cache of files, which contained hundreds of mentions of Trump, Prince Andrew, and other prominent figures.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>BBC</strong> presents the Wasserman revelation as one element in a larger pattern of prominent figures' involvement with Epstein and Maxwell, reporting his statement and the nature of the emails while contextualizing them within the broader file releases and their implications for various public figures. ([link](<a href="https://www.bbc.com/news/articles/cyv5z76jmpvo?at_medium=RSS&at_campaign=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> emphasizes the personal discomfort and potential political liability for Wasserman, presenting the emails as evidence of a social connection that Wasserman must now address while covering the broader implications of the file release for various officials and business figures. ([link](<a href="https://www.theguardian.com/us-news/2026/jan/31/casey-wasserman-los-angeles-olympics-ghislaine-maxwell" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">SPORTS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Shakur Stevenson Becomes Four-Division Champion With Dominant Victory Over Teófimo López</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Shakur Stevenson delivered a masterful performance Saturday night at Madison Square Garden, defeating Teófimo López by unanimous decision (119-109 cards) to capture the WBO and lineal junior welterweight titles and become a four-division champion. Stevenson, 27, outmaneuvered and outthought López over 12 rounds in what observers described as the most complete performance of Stevenson's career, establishing himself among boxing's elite. The bout was overshadowed by an unusual moment when heavyweight Jarrell Miller's hairpiece was dislodged during his fight on the undercard, which he threw into the crowd.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> emphasizes Stevenson's tactical mastery and the quality of his performance, framing the victory as a statement of his arrival at boxing's highest level with detailed technical analysis of how he controlled the fight. The coverage also documents the bizarre hairpiece incident with bemused detail. ([link](<a href="https://www.theguardian.com/sport/2026/feb/01/shakur-stevenson-teofimo-lopez-fight-report" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>NY Post</strong> presents the victory as a significant achievement in Stevenson's career arc, reporting the unanimous decision scores and contextualizing his four-division status within the sport's elite company. ([link](<a href="https://nypost.com/2026/02/01/sports/shakur-stevenson-dominates-teofimo-lopez-to-become-four-division-champion/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">MARKET SIGNALS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Bitcoin Crashes Below $80,000 Amid Liquidations and Confidence Crisis</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Bitcoin fell below $80,000 Saturday, touching November 2024 lows, amid $1.5 billion in leveraged liquidations as investors reassessed confidence in the cryptocurrency following the week's broader market turbulence. The decline extended a losing streak driven partly by Kevin Warsh's nomination as Federal Reserve chair, which spooked markets betting on rate cuts, and represents renewed questions about Bitcoin's near-term trajectory and investor conviction. Price, relevance, and conviction—the three pillars of Bitcoin's previous rally—are all under pressure, according to market observers.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Bloomberg</strong> frames the crash as a crisis of confidence and a test of Bitcoin's investment thesis, presenting the liquidations and price action as evidence that conviction among leveraged traders is evaporating and that reassessments of monetary policy are rippling through risk assets. ([link](<a href="https://www.bloomberg.com/news/articles/2026-02-01/bitcoin-s-break-below-80-000-signals-new-crisis-of-confidence" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Zero Hedge</strong> emphasizes the mechanical driver of liquidations and the algorithmic selling that accelerated the decline, presenting the crash as evidence of fragility in leveraged positioning and questioning whether the recent Bitcoin rally was sustainable given underlying economic uncertainties. ([link](<a href="https://www.zerohedge.com/markets/bitcoin-crashes-nov-2024-lows-amid-15-billion-levered-liquidations" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Luxury 'Phobia' Grips Chinese Consumers, Threatening Brands Like Chanel and Gucci</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Chinese consumers are turning away from conspicuous consumption toward domestic brands amid a cultural shift toward understated wealth display that poses a significant challenge for Western luxury houses like Chanel, Gucci, and Louis Vuitton. The trend, which observers describe as "luxury phobia," reflects both economic uncertainty and changing social attitudes toward visible affluence in China, where flaunting wealth increasingly carries social stigma. Domestic brands positioned as "local heroes" are capturing market share from international luxury competitors who have long dominated China's premium segment.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">How it's being covered:</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>MarketWatch</strong> presents the trend as a major headwind for luxury conglomerates, reporting the shift in consumer preferences and its implications for brands' earnings and market positioning in the world's second-largest economy. The coverage frames the change as structural rather than cyclical. ([link](<a href="https://www.marketwatch.com/story/luxury-phobia-is-turning-the-chinese-away-from-conspicuous-consumption-and-toward-local-hero-domestic-brands-7de8be25?mod=mw_rss_topstories" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">BRIEFLY</h2>
+<ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Democrat Taylor Rehmet Wins Texas State Senate Seat in Republican District:</strong> Democrat Taylor Rehmet flipped a reliably Republican Texas state Senate district on Saturday, winning in a seat President Trump carried by 17 points in 2024—a sign of GOP erosion in traditionally safe areas. (NPR, Fox News)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>US, Iran Signal Progress on Negotiations as Second Round of Talks Begins:</strong> A top Iranian official said Saturday that progress is being made toward launching negotiations with the United States, while Trump confirmed diplomatic discussions were underway even as military tensions remain elevated. (Axios, Al Jazeera)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Mine Collapse in Eastern Congo Kills More Than 200 People:</strong> A mine collapse Wednesday at the rebel-controlled Rubaya mines in Democratic Republic of Congo killed more than 200 people due to heavy rains, in a region that supplies critical coltan used in smartphone production. (NPR, BBC)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>US Envoy Arrives in Venezuela to Reopen Embassy After Seven Years:</strong> Laura Dogu, the top US envoy for Venezuela, arrived Saturday in Caracas as diplomatic relations resume following the Trump-backed ouster of Nicolas Maduro, amid pressure on Venezuela to open its oil sector to private investment. (Al Jazeera, Newsmax)</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Don Lemon and Georgia Fort Released on Bond, Face Federal Charges Over Minnesota Church Protest:</strong> Independent journalists Don Lemon and Georgia Fort were released Friday on personal recognizance bonds after federal prosecutors charged them with conspiracy against religious freedom and FACE Act violations related to a church service disruption during Minneapolis anti-ICE protests. (NPR, Washington Examiner)</li>
+</ul>
+            </td>
+          </tr>
+        </table>       
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>
+
+    </article>
+  </main>
+
+  <section class="subscribe-cta">
+    <h2>Get The Parallax Daily</h2>
+    <p>Balanced news coverage delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+</body>
+</html>
