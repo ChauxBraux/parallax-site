@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Parallax - Monday, February 2, 2026</title>
+  <meta name="description" content="The Parallax daily digest for Monday, February 2, 2026 - balanced news coverage from across the political spectrum.">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.readparallax.com/archive/the-parallax---monday--february-2--2026.html">
+  <meta property="og:title" content="The Parallax - Monday, February 2, 2026">
+  <meta property="og:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Parallax - Monday, February 2, 2026">
+  <meta name="twitter:description" content="Daily news digest showing how the same stories are covered across the political spectrum.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+    
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: white;
+      padding: 48px 24px;
+      text-align: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8em, 5vw, 2.2em);
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .page-header .date {
+      color: var(--blue);
+      font-style: italic;
+      font-size: 1.1em;
+    }
+    
+    .back-link {
+      margin-top: 16px;
+    }
+    
+    .back-link a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .back-link a:hover {
+      color: var(--blue);
+    }
+    
+    /* Article Content */
+    .article-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      flex: 1;
+    }
+    
+    .article-content {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    
+    /* Override email styles */
+    .article-content table {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    
+    .article-content td {
+      padding: 0 !important;
+    }
+    
+    .article-content h1,
+    .article-content h2,
+    .article-content h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    
+    .article-content h1:first-child,
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+    
+    .article-content h2 {
+      font-size: 1.4em;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--light-blue);
+    }
+    
+    .article-content h3 {
+      font-size: 1.2em;
+      color: var(--blue);
+    }
+    
+    .article-content p {
+      margin-bottom: 16px;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+    
+    .article-content a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+    
+    .article-content a:hover {
+      text-decoration: underline;
+    }
+    
+    .article-content hr {
+      border: none;
+      border-top: 1px solid #e9ecef;
+      margin: 32px 0;
+    }
+    
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    
+    .article-content li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+    
+    .article-content strong {
+      color: var(--navy);
+    }
+    
+    .article-content em {
+      color: var(--text-light);
+    }
+    
+    .article-content blockquote {
+      border-left: 4px solid var(--blue);
+      padding-left: 20px;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-light);
+    }
+    
+    /* Audio Player */
+    .audio-player audio {
+      width: 100%;
+    }
+    
+    .audio-player audio::-webkit-media-controls-panel {
+      background: white;
+    }
+    
+    /* CTA Section */
+    .subscribe-cta {
+      background: var(--navy);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    
+    .subscribe-cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6em;
+      margin-bottom: 12px;
+    }
+    
+    .subscribe-cta p {
+      opacity: 0.85;
+      margin-bottom: 24px;
+    }
+    
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+    }
+    
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 24px;
+      }
+      
+      .nav-logo img {
+        height: 30px;
+      }
+      
+      .page-header {
+        padding: 40px 20px;
+      }
+      
+      .article-container {
+        padding: 32px 16px;
+      }
+      
+      .article-content {
+        padding: 24px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 16px;
+      }
+      
+      .nav-logo img {
+        height: 26px;
+      }
+      
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9em;
+      }
+      
+      .signup-form {
+        flex-direction: column;
+      }
+      
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <h1>The Parallax</h1>
+    <p class="date">Monday, February 2, 2026</p>
+    <p class="back-link"><a href="/archive/">← Back to Archive</a></p>
+  </header>
+
+  <main class="article-container">
+    <article class="article-content">
+      
+  <div style="background: #f8f9fa; border-radius: 8px; padding: 16px 20px; margin-bottom: 32px; border: 1px solid #e9ecef;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+      <span style="font-size: 1.4em;">🎧</span>
+      <span style="font-weight: 600; color: #1d3557;">Listen to today's edition</span>
+    </div>
+    <audio controls style="width: 100%;" preload="metadata">
+      <source src="https://audio.readparallax.com/2026-02-02.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+      
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+  <title>The Parallax - Monday, February 2, 2026</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+        padding: 16px !important;
+      }
+      .header-title {
+        font-size: 2em !important;
+      }
+      h2 {
+        font-size: 1.3em !important;
+      }
+      h3 {
+        font-size: 1.1em !important;
+      }
+      p, li {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+      }
+      ul {
+        padding-left: 16px !important;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      .email-container {
+        padding: 12px !important;
+      }
+      .header-title {
+        font-size: 1.75em !important;
+        letter-spacing: 1px !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f5f5f5; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
+  
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f5f5f5;">
+    <tr>
+      <td align="center" style="padding: 20px 10px;">
+        
+        <table role="presentation" class="email-container" width="680" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; max-width: 680px; width: 100%; font-family: Georgia, 'Times New Roman', serif; color: #1a1a1a;">
+          
+          <!-- Header -->
+          <tr>
+            <td style="padding: 32px 24px 24px 24px; text-align: center; border-bottom: 3px solid #1d3557;">
+              <h1 class="header-title" style="font-size: 2.5em; margin: 0; letter-spacing: 2px; color: #1a1a1a;">THE PARALLAX</h1>
+              <p style="color: #457b9d; margin: 8px 0 0 0; font-style: italic; font-size: 1em;">Multiple angles. One picture.</p>
+              <p style="color: #6c757d; font-size: 0.9em; margin-top: 6px;">Monday, February 2, 2026</p>
+            </td>
+          </tr>
+          
+          <!-- Audio Link -->
+          <tr>
+            <td style="padding: 16px 24px; text-align: center; background-color: #f8f9fa; border-bottom: 1px solid #e9ecef;">
+              <a href="https://audio.readparallax.com/2026-02-02.mp3" style="color: #1d3557; text-decoration: none; font-size: 1em;">
+                🎧 <span style="text-decoration: underline;">Listen to today's edition</span> <span style="color: #6c757d; font-size: 0.9em;">(8 min)</span>
+              </a>
+            </td>
+          </tr>
+          
+          <!-- Main Content -->
+          <tr>
+            <td style="padding: 24px; line-height: 1.7;">
+              <h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">POLITICS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Musicians Use Grammy Awards to Condemn Trump's Immigration Enforcement</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Bad Bunny, Billie Eilish, and other performers won major awards at Sunday's 68th Grammy Awards ceremony while using their acceptance speeches to protest Immigration and Customs Enforcement operations. Bad Bunny won Album of the Year for "DeBÍ TiRAR MáS FOToS" and declared "ICE out" to a standing ovation. Billie Eilish, who won Song of the Year for "Wildflower," stated "No one is illegal on stolen land." Multiple attendees wore "ICE OUT" pins. The ceremony became a flashpoint for ongoing national debate over the Trump administration's immigration crackdown that has killed two Americans in Minneapolis in recent weeks.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> frames the event as musicians pushing back against "deadly ICE crackdown," emphasizing the political courage of artists using their platforms to challenge Trump's enforcement tactics amid the fatal shootings in Minnesota. ([link](<a href="https://www.theguardian.com/music/video/2026/feb/02/grammy-awards-2026-bad-bunny-and-kendrick-lamar-win-big-as-musicians-take-aim-at-ice-video" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Axios</strong> presents the story as a coordinated protest moment, documenting that "Bad Bunny received a standing ovation during his 'ICE out' acceptance speech" and noting which other stars wore pins or made statements, treating it as a unified statement by the music industry. ([link](<a href="https://www.axios.com/2026/02/02/ice-out-2026-grammys-protest-pins-bad-bunny-photos" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Washington Examiner</strong> leads with celebrities "blasting" Trump and ICE, but notes the event was "traditionally hailed as 'music's biggest night,'" framing the political messaging as notable for dominating what should be purely entertainment coverage. ([link](<a href="https://www.washingtonexaminer.com/news/4442514/celebrities-blast-ice-at-grammys/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Trump Threatens Legal Action Against Trevor Noah Over Epstein Island Comments</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump threatened to sue Grammy Awards host Trevor Noah on Monday morning after Noah made jokes during his opening monologue suggesting Trump visited Jeffrey Epstein's private island. Trump posted on Truth Social that he would sue Noah, whom he called "talentless," for "plenty of $S." Trump denied ever visiting the island and characterized the remark as defamatory. The incident occurred as millions of pages of Epstein-related documents were being released by the Justice Department.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>NY Post</strong> reports Trump's threat straightforwardly, quoting his Truth Social post and noting he called Noah "talentless" while stating he "will be suing" him, presenting it as Trump's direct legal threat in response to the comedian's joke. ([link](<a href="https://nypost.com/2026/02/02/us-news/donald-trump-threatens-to-sue-trevor-noah-after-grammys-host-claims-prez-visited-epstein-island/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Washington Examiner</strong> covers the same threat but adds context that Trump "objected to Noah's remarks insinuating that he visited Little Saint James," framing the dispute as one of competing claims rather than an obvious joke. ([link](<a href="https://www.washingtonexaminer.com/news/4442537/trump-threatens-sue-grammy-host-trevor-noah-epstein-comments/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Partial Government Shutdown Remains Unresolved Over DHS Funding Disputes</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">A partial government shutdown that began Saturday continued into the new week as House Republicans and Democrats remained deadlocked over funding for the Department of Homeland Security. Speaker Mike Johnson predicted resolution by Tuesday and indicated Republicans would pass spending bills along party lines without Democratic support. House Democrats, led by Minority Leader Hakeem Jeffries, demanded "dramatic reform" to DHS before voting to fund it, citing the fatal ICE shootings in Minneapolis as evidence of enforcement overreach. The Senate had passed all spending bills except the DHS measure.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Axios</strong> emphasizes the internal Democratic fracture, reporting that "House Democrats splintered on a private call Sunday" over whether to fund DHS even temporarily, noting "many House Democrats despise the idea of voting to fund DHS without reforms." ([link](<a href="https://www.axios.com/2026/02/02/democrats-dhs-funding-jeffries-shutdown-ice-vote" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>)) and ([link](<a href="https://www.axios.com/2026/02/01/johnson-government-shutdown-dhs-ice-funding" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Washington Examiner</strong> focuses on Republican strategy, with Speaker Johnson "confident" he has votes to pass legislation and move "forward without Democratic support," framing it as a GOP effort to bypass the opposition. ([link](<a href="https://www.washingtonexaminer.com/news/house/4442412/johnson-confident-government-shutdown-ends-tuesday/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> contextualizes the shutdown within broader ICE tensions, noting that "House Democrats have so far said they are refusing to guarantee the votes needed to speed passage of a funding measure," treating DHS funding as inseparable from immigration enforcement disputes. ([link](<a href="https://www.theguardian.com/us-news/2026/feb/01/government-shutdown-democrats-dhs-funding" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">WORLD</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Gaza's Rafah Border Crossing Reopens for Limited Traffic Under Ceasefire</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Gaza's key Rafah crossing with Egypt reopened Monday for limited traffic as part of the second phase of the US-brokered Israeli-Hamas ceasefire agreement. The crossing will operate for six hours daily, allowing approximately 150 patients to exit for medical care in Egypt. Only dozens of Palestinians and no goods will cross in both directions each day, according to Egyptian and Israeli security officials. The reopening marks a critical humanitarian step after months of closure during the conflict.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>NPR</strong> presents the reopening as a straightforward ceasefire implementation, stating that it "reopened on Monday for limited traffic, a key step as the Israeli-Hamas ceasefire moves ahead." ([link](<a href="https://www.npr.org/2026/02/02/g-s1-108287/gaza-rafah-border-crossing-reopens" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>BBC</strong> emphasizes the constraints, leading with "Only dozens of Palestinians and no goods will be able to cross in both directions each day," highlighting the severe restrictions despite the symbolic reopening. ([link](<a href="https://www.bbc.com/news/articles/c99kdjdj9l8o?at_medium=RSS&at_campaign=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Al Jazeera</strong> frames it within the broader ceasefire framework, noting the reopening is "stipulated under the second phase of the US-brokered 'ceasefire'" and covering wounded patients' departures, emphasizing the humanitarian crisis that necessitates the arrangement. ([link](<a href="https://www.aljazeera.com/news/2026/2/2/gazas-rafah-crossing-reopens-for-limited-traffic?traffic_source=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Right-Wing Candidate Laura Fernández Wins Costa Rica Presidential Election</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Laura Fernández, a right-wing candidate running on a tough-on-crime platform, won Costa Rica's presidential election outright in the first round on Sunday, securing victory amid public concern over rising organized crime and gang violence. Fernández, from the ruling party, capitalized on voter anxiety about deteriorating security conditions. Her victory reflects a regional trend of conservative candidates gaining traction in Central America through law-and-order messaging.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>BBC</strong> frames it as a security-driven election, stating Fernández "won the election outright in the first round amid concern about a rise in organised crime," presenting her victory as a direct response to crime rates. ([link](<a href="https://www.bbc.com/news/articles/cdre7me407yo?at_medium=RSS&at_campaign=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Al Jazeera</strong> identifies her ideology first, describing her as a "right wing candidate" whose victory shows "preliminary results show Laura Fernandez poised to win a presidential race dominated by rising drug-related violence," emphasizing both her political positioning and the crime context. ([link](<a href="https://www.aljazeera.com/news/2026/2/2/laura-fernandez-leads-early-results-in-costa-ricas-presidential-election?traffic_source=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Kennedy Center to Close for Two Years for Renovations After Name Change Turmoil</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">President Trump announced Sunday that the John F. Kennedy Center for the Performing Arts will close on July 4, 2026, for approximately two years of renovations. The closure comes after Trump's handpicked board renamed the venue the "Trump Kennedy Center" in December, sparking significant pushback from artists, the Kennedy family, and Democrats. Multiple performers and organizations canceled events following the renaming, and ticket sales reached historic lows. Trump described the closure as necessary to achieve "higher construction quality and faster completion."</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>The Guardian</strong> emphasizes the causality between the name change and the crisis, noting the venue "has seen a wave of performers cancel events in recent months" and connecting the closure directly to the renaming controversy, while quoting Trump's announcement on Truth Social. ([link](<a href="https://www.theguardian.com/us-news/2026/feb/01/kennedy-center-dc-closed-trump" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Axios</strong> frames it as damage control, reporting that "The president's announcement comes after a wave of event cancellations at the D.C. venue after its name was changed in December to include Trump's name," treating the closure as a response to the backlash rather than a routine renovation. ([link](<a href="https://www.axios.com/2026/02/02/trump-kennedy-center-close-two-years" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Fox News</strong> presents Trump's rationale without critical context, stating he "announced plans to temporarily close the Trump Kennedy Center for two years for an extensive revitalization and rebuilding project," using the new name without qualification. ([link](<a href="https://www.foxnews.com/politics/trump-announces-two-year-closure-trump-kennedy-center-major-renovations" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">MARKET SIGNALS</h2>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Precious Metals Plunge Wipes Out $7 Trillion in Value Across Asia</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Gold and silver suffered their worst week in more than a decade on Friday, with gold falling nearly $1,000 from its peak and silver posting a record 31% decline, wiping out massive portions of gains accumulated during the metals' parabolic rally. The collapse triggered a broader selloff in Asian equities, with South African stocks falling the most since March 2020. Traders attributed the rout to unwinding of "crowded" bullish positions and decade-high margin debt levels that amplified losses. Central banks signaled continued demand for gold despite the volatility.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>MarketWatch</strong> emphasizes the risk lesson, framing the story as "Gold and silver's $7 trillion wipeout delivers a painful lesson about risk," arguing that investors must "reconsider their portfolio hedges" since supposedly "safe" assets can crash dramatically. ([link](<a href="https://www.marketwatch.com/story/gold-and-silvers-7-trillion-wipeout-delivers-a-painful-lesson-about-risk-22dbf70f?mod=mw_rss_topstories" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Bloomberg</strong> breaks down the mechanics of the collapse, with reporting that "traders sold dollars just before Warsh choice sparked rebound" and that "traders unwound 'crowded' bets," focusing on leverage and positioning dynamics rather than systemic lessons. ([link](<a href="https://www.bloomberg.com/news/articles/2026-02-01/gold-silver-extend-declines-after-dramatic-reversal-of-rally" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Bloomberg</strong> also reports that "people were still queuing up to buy gold in Singapore on Monday even as prices plummeted," showing extraordinary retail resilience and suggesting institutional panic rather than fundamental concerns about gold's value. ([link](<a href="https://www.bloomberg.com/news/articles/2026-02-02/singaporeans-are-queueing-up-to-buy-the-dip-in-gold-despite-rout" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Oracle Plans to Raise Up to $50 Billion Amid AI Spending Uncertainty</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Oracle announced plans to raise as much as $50 billion through debt and equity markets during 2026 as the company aggressively funds AI infrastructure expansion. The capital raise follows an $18 billion bond offering in fall 2025 and comes as investors question whether AI data center demand projections are sustainable. Oracle's stock and credit default swap spreads have deteriorated significantly, with CDS reaching levels not seen since 2008.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>MarketWatch</strong> frames it as strategic positioning, reporting that "Oracle intends to tap the debt and equity markets anew in 2026" after the earlier bond offering, presenting it as planned capital allocation for growth. ([link](<a href="https://www.marketwatch.com/story/oracle-amps-up-its-ai-bet-with-a-plan-to-raise-as-much-as-50-billion-this-year-872a2dba?mod=mw_rss_topstories" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Zero Hedge</strong> frames it as panic, with the headline "A Panicking Oracle Plans To Raise Up To $50 Billion, As Its Stock And Bonds Crater," suggesting desperation and noting that "ORCL CDS - which on that day hit the widest level since the 2008 financial crisis at 156bps." ([link](<a href="https://www.zerohedge.com/markets/panicking-oracle-plans-raise-50-billion-its-stock-and-bonds-crater" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Data Center Demand Story Faces Credibility Crisis as Utilities Plan Overbuild</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;">Utilities analysts warn that the AI-driven data center construction boom may be creating twice as much capacity as necessary by 2030, despite forecasts calling for 94 additional gigawatts of power demand. One long-time utilities analyst argues the industry is poised to significantly overbuild, challenging the premise of the "picks and shovels" investment thesis that has driven energy sector gains. The divergence suggests either demand projections are inflated or that capacity additions far exceed rational planning.</p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>How it's being covered:</strong></p>
+<p style="margin-bottom: 16px; font-size: 1em; line-height: 1.7;"><strong>Bloomberg</strong> presents both the bullish narrative and the skeptic's case, with reporting that "Utilities analysts are having a moment as the energy sector gets a boost from AI" while documenting that one analyst "says that — from a utilities perspective — we're already set to overbuild capacity by twice as much is needed." ([link](<a href="https://www.bloomberg.com/news/articles/2026-02-02/are-we-building-more-ai-datacenters-than-we-need" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</p>
+<h2 style="color: #457b9d; margin-top: 32px; margin-bottom: 16px; font-size: 1.4em;">BRIEFLY</h2>
+<ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>ICE Arrests Over 650 Illegal Aliens in West Virginia During Multi-Agency Operation:</strong> Federal Immigration and Customs Enforcement arrested more than 650 undocumented immigrants in West Virginia between January 5-19 in coordination with 14 federal, state and local law enforcement partners. (NY Post [link](<a href="https://nypost.com/2026/02/02/us-news/ice-arrests-over-650-illegal-immigrants-in-west-virginia-with-police-cooperation/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>), Zero Hedge [link](<a href="https://www.zerohedge.com/markets/ice-buys-warehouse-network-support-ramped-deportation-operations" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Peter Mandelson Resigns from Labour After Epstein Files Reveal New Connections:</strong> Former British government minister and EU ambassador Peter Mandelson announced his resignation from Prime Minister Keir Starmer's Labour Party following newly released Epstein files that revealed his ties to the disgraced financier, saying he wanted to avoid causing "further embarrassment" to the party. (NY Post [link](<a href="https://nypost.com/2026/02/02/world-news/uk-minister-peter-mandelson-resigns-from-labour-party-after-jeffrey-epstein-ties-revealed/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>), Al Jazeera [link](<a href="https://www.aljazeera.com/economy/2026/2/2/uks-ex-ambassador-mandelson-quits-labour-over-epstein-links-reports-say?traffic_source=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>5-Year-Old Liam Ramos Released From ICE Detention After Judge Called Conditions 'Bereft of Human Decency':</strong> U.S. District Judge Fred Biery ordered the release of 5-year-old Liam Ramos and his father Adrian from immigration detention, ruling their confinement was "cruel" and "bereft of human decency," with the boy's image in a blue bunny cap sparking national outrage over Trump administration detention practices. (BBC [link](<a href="https://www.bbc.com/news/articles/cwynzw7jd4go?at_medium=RSS&at_campaign=rss" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>), Washington Post [link](<a href="https://www.washingtonpost.com/immigration/2026/02/01/trump-immigration-children-families-detention/" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Carlos Alcaraz Becomes Youngest Man to Complete Career Grand Slam After Defeating Djokovic:</strong> Spanish tennis champion Carlos Alcaraz, 22, defeated Novak Djokovic in four sets at the Australian Open final to become the youngest male player ever to win all four major tournaments, cementing his status as the sport's rising superpower. (NPR [link](<a href="https://www.npr.org/2026/02/01/nx-s1-5695713/alcaraz-beats-djokovic-grand-slam" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</li>
+<li style="margin-bottom: 12px; line-height: 1.6;"><strong>Democratic Candidate Christian Menefee Wins Texas Special Election, Narrowing GOP House Majority:</strong> Progressive Democrat Christian Menefee won a special election for Texas's 18th Congressional District, flipping a seat in a heavily Republican area, further eroding the already razor-thin Republican House majority with his vow to "tear ICE up from the roots." (Zero Hedge [link](<a href="https://www.zerohedge.com/political/texas-special-election-narrows-gops-slim-us-house-margin" style="color: #457b9d; text-decoration: underline; padding: 2px 0;">link</a>))</li>
+</ul>
+            </td>
+          </tr>
+        </table>       
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>
+
+    </article>
+  </main>
+
+  <section class="subscribe-cta">
+    <h2>Get The Parallax Daily</h2>
+    <p>Balanced news coverage delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+</body>
+</html>
