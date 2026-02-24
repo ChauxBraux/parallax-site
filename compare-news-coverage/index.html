@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare News Coverage Across the Political Spectrum | The Parallax</title>
+  <meta name="description" content="See how 15 news outlets cover the same stories differently. The Parallax compares coverage from NPR to Fox News, The Guardian to Daily Wire — delivered free every morning.">
+  <link rel="canonical" href="https://www.readparallax.com/compare-news-coverage/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/compare-news-coverage/">
+  <meta property="og:title" content="Compare News Coverage Across the Political Spectrum | The Parallax">
+  <meta property="og:description" content="See how 15 news outlets cover the same stories differently. The Parallax compares coverage from NPR to Fox News — delivered free every morning.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="The Parallax">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compare News Coverage Across the Political Spectrum | The Parallax">
+  <meta name="twitter:description" content="See how 15 news outlets cover the same stories differently. The Parallax compares coverage from NPR to Fox News — delivered free every morning.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Compare News Coverage Across the Political Spectrum",
+    "description": "See how 15 news outlets cover the same stories differently. The Parallax compares coverage from NPR to Fox News, The Guardian to Daily Wire — delivered free every morning.",
+    "url": "https://www.readparallax.com/compare-news-coverage/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Parallax",
+      "url": "https://www.readparallax.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.readparallax.com/logo.png"
+      }
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I compare news coverage from different outlets?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Parallax monitors 15 news sources across the political spectrum every day, identifies when multiple outlets cover the same story, and shows you side-by-side how each one reports it — delivered free to your inbox each morning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do different news outlets cover the same story differently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "News outlets make editorial choices about which facts to lead with, which sources to quote, and how to frame events. These choices are shaped by editorial perspective, audience expectations, and institutional values. Comparing coverage across outlets reveals these patterns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a balanced news source?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No single outlet is truly balanced. Balance comes from reading across the spectrum. The Parallax curates coverage from 15 sources — from NPR and The Guardian to Fox News and Daily Wire — so you can see the full picture without visiting each site individually."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy: #1d3557; --blue: #457b9d; --light-blue: #a8dadc;
+      --cream: #f8f9fa; --text: #1a1a1a; --text-light: #6c757d;
+    }
+    body { font-family: 'Source Sans Pro', -apple-system, sans-serif; color: var(--text); line-height: 1.6; background: var(--cream); min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Navigation */
+    nav { background: white; border-bottom: 1px solid #e9ecef; padding: 16px 24px; position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; transition: opacity 0.2s; }
+    .nav-logo:hover { opacity: 0.8; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 0.95em; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.listen-link { color: var(--blue); font-weight: 600; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      color: white;
+      padding: 80px 24px 64px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2em, 6vw, 3em);
+      margin-bottom: 20px;
+      line-height: 1.2;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .subtitle {
+      font-size: clamp(1.05em, 3vw, 1.25em);
+      opacity: 0.9;
+      max-width: 640px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+    .hero-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 480px;
+      margin: 0 auto 16px;
+    }
+    .hero-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+    .hero-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    .hero-form input[type="submit"]:hover { background: #5a9ab8; }
+    .hero-note {
+      font-size: 0.85em;
+      opacity: 0.65;
+    }
+
+    /* Content sections */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    .section {
+      padding: 56px 0;
+    }
+    .section + .section {
+      border-top: 1px solid #dee2e6;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4em, 4vw, 1.7em);
+      color: var(--navy);
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    .section p {
+      font-size: 1.05em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Source grid */
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+    .source-chip {
+      background: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 12px 16px;
+      text-align: center;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: var(--navy);
+      transition: box-shadow 0.2s;
+    }
+    .source-chip:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    /* How it works steps */
+    .steps {
+      display: grid;
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .step {
+      background: white;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-number {
+      background: var(--navy);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95em;
+      flex-shrink: 0;
+    }
+    .step-content h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      font-size: 1.1em;
+      margin-bottom: 6px;
+    }
+    .step-content p {
+      font-size: 0.95em;
+      margin-bottom: 0;
+      color: var(--text-light);
+    }
+
+    /* Example box */
+    .example-box {
+      background: white;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin: 28px 0;
+      border-left: 4px solid var(--blue);
+    }
+    .example-box h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      font-size: 1.15em;
+      margin-bottom: 16px;
+    }
+    .example-source {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .example-source:last-child { border-bottom: none; }
+    .example-source strong { color: var(--navy); }
+
+    /* Mid CTA */
+    .mid-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      color: white;
+      margin: 48px 0;
+    }
+    .mid-cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5em;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .mid-cta p { color: rgba(255,255,255,0.85); margin-bottom: 20px; font-size: 1em; }
+    .mid-cta-form {
+      display: flex;
+      gap: 10px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .mid-cta-form input[type="email"] {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+    }
+    .mid-cta-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+    .mid-cta-form input[type="submit"]:hover { background: #5a9ab8; }
+
+    /* FAQ */
+    .faq-item {
+      background: white;
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .faq-item h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--navy);
+      font-size: 1.05em;
+      margin-bottom: 10px;
+    }
+    .faq-item p {
+      font-size: 0.95em;
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+
+    /* Bottom CTA */
+    .bottom-cta {
+      background: var(--navy);
+      color: white;
+      padding: 64px 24px;
+      text-align: center;
+      margin-top: auto;
+    }
+    .bottom-cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      margin-bottom: 12px;
+    }
+    .bottom-cta p { opacity: 0.85; margin-bottom: 28px; font-size: 1.05em; }
+    .bottom-cta-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto 16px;
+    }
+    .bottom-cta-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    .bottom-cta-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    .bottom-cta-form input[type="submit"]:hover { background: #5a9ab8; }
+    .bottom-cta .cta-note { font-size: 0.85em; opacity: 0.6; }
+    .bottom-cta .cta-links {
+      margin-top: 32px;
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .bottom-cta .cta-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+    .bottom-cta .cta-links a:hover { color: white; }
+
+    /* Footer */
+    footer { background: #111; color: white; padding: 40px 24px; text-align: center; }
+    .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9em; transition: color 0.2s; }
+    .footer-links a:hover { color: white; }
+    .footer-note { font-size: 0.8em; color: rgba(255,255,255,0.5); line-height: 1.8; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px 48px; }
+      .step { flex-direction: column; gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      nav { padding: 14px 16px; }
+      .nav-logo img { height: 26px; }
+      .nav-links { gap: 16px; font-size: 0.9em; }
+      .hero-form, .mid-cta-form, .bottom-cta-form { flex-direction: column; }
+      .hero-form input[type="email"],
+      .hero-form input[type="submit"],
+      .mid-cta-form input[type="email"],
+      .mid-cta-form input[type="submit"],
+      .bottom-cta-form input[type="email"],
+      .bottom-cta-form input[type="submit"] { width: 100%; min-width: unset; }
+      .source-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/listen/" class="listen-link">🎧 Listen</a>
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Compare News Coverage Across the Political Spectrum</h1>
+    <p class="subtitle">Every morning, The Parallax shows you how 15 news outlets cover the same stories — from NPR to Fox News, The Guardian to Daily Wire. No labels. No bias scores. Just the coverage, side by side.</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/parallax" method="post" class="hero-form">
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free →" />
+    </form>
+    <p class="hero-note">Free daily newsletter. No spam. Unsubscribe anytime.</p>
+  </section>
+
+  <div class="content">
+
+    <!-- What You Get -->
+    <section class="section">
+      <h2>What You Get Every Morning</h2>
+      <p>The Parallax is a free daily digest that identifies the biggest news stories of the day and shows you how outlets across the political spectrum report on each one. Instead of reading five different websites to understand the full picture, you get it in one email — typically a 5-minute read, with an audio version if you'd rather listen.</p>
+      <p>For each major story, you'll see a neutral summary followed by source-by-source coverage: what each outlet reports, what facts they lead with, and what they include or leave out. We use neutral language throughout — we tell you <em>what</em> each outlet says, never <em>how</em> you should interpret it.</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>15 Sources, Monitored Daily</h3>
+            <p>Each morning we pull the latest from news outlets spanning the full political spectrum — left, center, and right — to ensure no perspective is missing.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Same Story, Identified Automatically</h3>
+            <p>When multiple outlets cover the same event, our system clusters them together — so you can compare apples to apples.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Coverage Compared, Not Judged</h3>
+            <p>We report what each outlet says using neutral language. We never label sources as "left" or "right" in the digest — you see the coverage and draw your own conclusions.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Delivered to Your Inbox (and Ears)</h3>
+            <p>The full digest arrives by email each morning. Prefer to listen? There's an audio edition you can play on your commute.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example -->
+    <section class="section">
+      <h2>What It Looks Like</h2>
+      <p>Here's a simplified example of how The Parallax covers a single story. The real digest includes 3–5 stories like this, plus quick hits.</p>
+      <div class="example-box">
+        <h3>Congress Passes Infrastructure Spending Bill</h3>
+        <p style="font-size: 0.95em; color: var(--text-light); margin-bottom: 16px;">The Senate approved a $200 billion infrastructure package on a 64–36 vote, with 12 Republicans joining all Democrats. The bill focuses on roads, bridges, and broadband expansion.</p>
+        <p style="font-size: 0.85em; font-weight: 600; color: var(--blue); margin-bottom: 8px;">How it's being covered:</p>
+        <div class="example-source"><strong>NPR</strong> reports the bill includes the largest broadband investment in U.S. history, with $42 billion earmarked for rural connectivity.</div>
+        <div class="example-source"><strong>Fox News</strong> reports 12 Republican senators broke ranks to support the bill, and quotes the Senate minority leader calling it "a gateway to runaway spending."</div>
+        <div class="example-source"><strong>Bloomberg</strong> reports construction and materials stocks rallied on the news, with the sector up 3.2% in after-hours trading.</div>
+        <div class="example-source"><strong>Washington Post</strong> reports the White House celebrated the bipartisan vote, with the president calling it "proof that Washington can still work."</div>
+      </div>
+      <p>Same event. Four outlets. Four different facts leading the story. That's the value of comparing news coverage — and it's what The Parallax delivers every day.</p>
+    </section>
+
+    <!-- Mid CTA -->
+    <div class="mid-cta">
+      <h2>See Today's Coverage Comparison</h2>
+      <p>Join readers who start their morning with the full picture.</p>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/parallax" method="post" class="mid-cta-form">
+        <input type="email" name="email" placeholder="you@email.com" required />
+        <input type="submit" value="Subscribe Free" />
+      </form>
+    </div>
+
+    <!-- Our Sources -->
+    <section class="section">
+      <h2>Our Sources</h2>
+      <p>We deliberately curate a wide range of outlets to ensure you see reporting from across the spectrum. These 15 sources form the foundation of every daily digest:</p>
+      <div class="source-grid">
+        <div class="source-chip">NPR</div>
+        <div class="source-chip">BBC</div>
+        <div class="source-chip">The Guardian</div>
+        <div class="source-chip">Al Jazeera</div>
+        <div class="source-chip">Washington Post</div>
+        <div class="source-chip">Vox</div>
+        <div class="source-chip">Axios</div>
+        <div class="source-chip">Bloomberg</div>
+        <div class="source-chip">MarketWatch</div>
+        <div class="source-chip">Fox News</div>
+        <div class="source-chip">NY Post</div>
+        <div class="source-chip">Wash. Examiner</div>
+        <div class="source-chip">Daily Wire</div>
+        <div class="source-chip">Newsmax</div>
+        <div class="source-chip">Zero Hedge</div>
+      </div>
+      <p>Every story in the digest links directly to the original source articles, so you can always dig deeper.</p>
+    </section>
+
+    <!-- Why Compare -->
+    <section class="section">
+      <h2>Why Compare News Coverage?</h2>
+      <p>Most people get their news from one or two sources. The problem isn't that those sources are wrong — it's that every outlet makes choices about which facts to highlight, which quotes to feature, and how to frame events. Over time, reading a single source gives you an accurate but incomplete picture.</p>
+      <p>Comparing coverage reveals patterns you can't see from a single source. One outlet might lead with economic impact while another leads with the political reaction. One might quote government officials while another quotes affected citizens. Neither is lying — but each is telling a different version of the same story.</p>
+      <p>The Parallax makes this comparison effortless. Instead of opening ten browser tabs every morning, you get the key perspectives in one place, in five minutes.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>Is The Parallax free?</h3>
+        <p>Yes. The daily email digest and audio edition are completely free.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does The Parallax label outlets as left or right?</h3>
+        <p>No. We report what each outlet says using neutral language. We don't label, score, or rate outlets by political lean in the digest. We believe you're capable of recognizing the differences yourself.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from AllSides or Ground News?</h3>
+        <p>Those are great tools for browsing coverage on demand. The Parallax is different — it's a curated daily digest that comes to you. We select the most important stories, synthesize the coverage, and deliver a complete picture in one email. No app to open, no browsing required.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is AI involved?</h3>
+        <p>Yes. We use AI to identify story clusters and synthesize coverage from our 15 sources, followed by an automated copy-editing layer that checks for neutrality and accuracy. The source selection and editorial principles are human decisions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How often is it published?</h3>
+        <p>Every morning, seven days a week. Each edition covers the previous 24 hours of news.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <h2>Start Seeing the Full Picture</h2>
+    <p>Join readers who compare news coverage from 15 outlets every morning — in 5 minutes.</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/parallax" method="post" class="bottom-cta-form">
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free →" />
+    </form>
+    <p class="cta-note">Free forever. No spam. Unsubscribe anytime.</p>
+    <div class="cta-links">
+      <a href="/archive/">Browse the archive</a>
+      <a href="/listen/">Listen to today's edition</a>
+      <a href="/latest/">Read today's digest</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/listen/">Listen</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+</body>
+</html>
