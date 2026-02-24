@@ -1,1 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listen to The Parallax — Daily Audio News Digest | Balanced Coverage</title>
+  <meta name="description" content="Listen to The Parallax daily audio digest. Hear how 15 news sources across the political spectrum cover the same stories — in under 5 minutes.">
+  <link rel="canonical" href="https://www.readparallax.com/listen/">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.readparallax.com/listen/">
+  <meta property="og:title" content="Listen to The Parallax — Daily Audio News Digest">
+  <meta property="og:description" content="Hear how 15 news sources across the political spectrum cover the same stories — in under 5 minutes. Free daily audio digest.">
+  <meta property="og:image" content="https://www.readparallax.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="The Parallax">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.readparallax.com/listen/">
+  <meta name="twitter:title" content="Listen to The Parallax — Daily Audio News Digest">
+  <meta name="twitter:description" content="Hear how 15 news sources across the political spectrum cover the same stories — in under 5 minutes. Free daily audio digest.">
+  <meta name="twitter:image" content="https://www.readparallax.com/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="alternate" type="application/rss+xml" title="The Parallax RSS Feed" href="https://www.readparallax.com/feed.xml">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Listen to The Parallax",
+    "description": "Daily audio news digest comparing coverage from 15 outlets across the political spectrum.",
+    "url": "https://www.readparallax.com/listen/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "The Parallax",
+      "url": "https://www.readparallax.com"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3aef0e15a5b4478896a70ac80d6234e0"}'></script><!-- End Cloudflare Web Analytics -->
+    
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+    
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+    
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+    
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    
+    .nav-logo:hover { opacity: 0.8; }
+    .nav-logo img { height: 36px; width: auto; }
+    
+    .nav-links { display: flex; gap: 32px; }
+    
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+      position: relative;
+      padding: 4px 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover, .nav-links a.active { color: var(--blue); }
+    .nav-links a.active::after, .nav-links a:hover::after { width: 100%; }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      color: white;
+      padding: 80px 24px;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8em, 6vw, 2.8em);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 32px;
+      font-size: clamp(1em, 3vw, 1.15em);
+      opacity: 0.9;
+      line-height: 1.7;
+    }
+    
+    /* Content */
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+    
+    .content h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5em;
+      color: var(--navy);
+      margin: 40px 0 16px;
+    }
+    
+    .content h2:first-child { margin-top: 0; }
+    
+    .content p {
+      margin-bottom: 16px;
+      color: #444;
+      line-height: 1.7;
+    }
+    
+    .content a { color: var(--blue); }
+    
+    /* Audio placeholder */
+    .audio-box {
+      background: white;
+      border: 2px solid var(--light-blue);
+      border-radius: 12px;
+      padding: 40px 32px;
+      text-align: center;
+      margin: 32px 0;
+    }
+    
+    .audio-box .icon {
+      font-size: 3em;
+      margin-bottom: 16px;
+    }
+    
+    .audio-box h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3em;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .audio-box p {
+      color: var(--text-light);
+      margin-bottom: 0;
+    }
+    
+    .audio-box a {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--navy);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .audio-box a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(29,53,87,0.3);
+      color: white;
+    }
+    
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    
+    .feature {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid #e9ecef;
+    }
+    
+    .feature .icon { font-size: 2em; margin-bottom: 12px; }
+    .feature h3 { font-size: 1em; color: var(--navy); margin-bottom: 8px; }
+    .feature p { font-size: 0.9em; color: var(--text-light); margin-bottom: 0; }
+    
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a4a6d 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      margin-bottom: 12px;
+    }
+    
+    .cta p { opacity: 0.9; margin-bottom: 24px; }
+    
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 18px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    
+    .signup-form input[type="submit"] {
+      padding: 14px 28px;
+      background: var(--blue);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.2s;
+    }
+    
+    .signup-form input[type="submit"]:hover { background: #3a6b8a; }
+    
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      padding: 32px 24px;
+    }
+    
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9em; }
+    .footer-links a:hover { color: white; }
+    .footer-note { font-size: 0.85em; opacity: 0.6; }
+    
+    @media (max-width: 768px) {
+      .hero { padding: 60px 20px; }
+      .content { padding: 40px 20px; }
+      .features { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 480px) {
+      nav { padding: 14px 16px; }
+      .nav-logo img { height: 26px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 0.9em; }
+      .hero { padding: 48px 16px; }
+      .signup-form { flex-direction: column; }
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] { width: 100%; min-width: unset; }
+      .footer-links { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/listen/" class="active">🎧 Listen</a>
+        <a href="/compare-news-coverage/">What We Do</a>
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Listen to Today's News Digest</h1>
+    <p>Hear how outlets across the political spectrum cover the same stories — in under 5 minutes. The Parallax audio digest gives you balanced news coverage you can listen to on the go.</p>
+  </section>
+
+  <main class="content">
+    <div class="audio-box">
+      <div class="icon">🎧</div>
+      <h3>Today's Audio Digest</h3>
+      <p>A new audio edition is generated every morning alongside the email digest.</p>
+      <a href="/latest/">Read Today's Edition →</a>
+    </div>
+
+    <h2>What You'll Hear</h2>
+    <p>
+      Each audio edition is a narrated summary of the day's biggest stories, covering how outlets from across the political spectrum report the same events. You'll hear what the left emphasizes, what the right focuses on, and what the center highlights — all in one concise listen.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="icon">⏱️</div>
+        <h3>Under 5 Minutes</h3>
+        <p>Quick enough for your commute or morning coffee</p>
+      </div>
+      <div class="feature">
+        <div class="icon">⚖️</div>
+        <h3>Balanced Coverage</h3>
+        <p>Every story includes left, center, and right perspectives</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📅</div>
+        <h3>Daily</h3>
+        <p>New edition every morning, 7 days a week</p>
+      </div>
+    </div>
+
+    <h2>How It Works</h2>
+    <p>
+      The audio digest is generated using ElevenLabs text-to-speech, narrating a condensed version of each day's Parallax edition. The script covers the same stories as the email newsletter — drawn from <a href="/compare-news-coverage/">15 sources across the political spectrum</a> — but is written specifically for listening.
+    </p>
+
+    <h2>Prefer Reading?</h2>
+    <p>
+      The full written digest has more detail and covers more stories than the audio version. <a href="/latest/">Read today's edition</a> or <a href="/archive/">browse the full archive</a>.
+    </p>
+    <p>
+      Want both? <a href="https://buttondown.com/parallax">Subscribe free</a> to get the written digest in your inbox every morning.
+    </p>
+  </main>
+
+  <section class="cta">
+    <h2>Get Balanced News Coverage Every Morning</h2>
+    <p>Subscribe for the full daily digest — with audio — delivered to your inbox.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/listen/">Listen</a>
+      <a href="/compare-news-coverage/">What We Do</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
