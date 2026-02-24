@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - The Parallax</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to The Parallax homepage or browse our archive.">
+  <link rel="canonical" href="https://www.readparallax.com/404.html">
+
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #1d3557;
+      --blue: #457b9d;
+      --light-blue: #a8dadc;
+      --cream: #f8f9fa;
+      --text: #1a1a1a;
+      --text-light: #6c757d;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3aef0e15a5b4478896a70ac80d6234e0"}'></script><!-- End Cloudflare Web Analytics -->
+
+    body {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.3s; opacity: 0; }
+
+    /* Navigation */
+    nav {
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow 0.3s ease;
+    }
+
+    nav.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .nav-logo:hover {
+      opacity: 0.8;
+    }
+
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: color 0.2s;
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--blue);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Error Content */
+    .error-section {
+      padding: 100px 24px;
+      text-align: center;
+      background: white;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .error-section .error-code {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(4em, 15vw, 8em);
+      font-weight: 700;
+      color: var(--light-blue);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .error-section h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6em, 5vw, 2.2em);
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .error-section p {
+      color: var(--text-light);
+      font-size: clamp(1em, 3vw, 1.15em);
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .error-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .error-links a {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .error-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .error-links a:active {
+      transform: translateY(0);
+    }
+
+    .error-links .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .error-links .btn-primary:hover {
+      background: var(--blue);
+    }
+
+    .error-links .btn-secondary {
+      background: var(--cream);
+      color: var(--navy);
+      border: 1px solid #e9ecef;
+    }
+
+    .error-links .btn-secondary:hover {
+      background: #edf0f2;
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: 60px 24px;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4em, 5vw, 1.8em);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      opacity: 0.85;
+      margin-bottom: 32px;
+      font-size: 1.1em;
+    }
+
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    .signup-form input[type="email"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 16px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      font-family: inherit;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .signup-form input[type="email"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .signup-form input[type="submit"] {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 1em;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+    }
+
+    .signup-form input[type="submit"]:hover {
+      background: #5a9ab8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .signup-form input[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: white;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.9em;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-note {
+      font-size: 0.8em;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .error-section {
+        padding: 80px 20px;
+      }
+
+      .nav-links {
+        gap: 24px;
+      }
+
+      .nav-logo img {
+        height: 30px;
+      }
+
+      .cta {
+        padding: 48px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 14px 16px;
+      }
+
+      .nav-logo img {
+        height: 26px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 0.9em;
+      }
+
+      .error-section {
+        padding: 60px 16px;
+      }
+
+      .error-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .error-links a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+      }
+
+      .signup-form {
+        flex-direction: column;
+        padding: 0 8px;
+      }
+
+      .signup-form input[type="email"],
+      .signup-form input[type="submit"] {
+        width: 100%;
+        min-width: unset;
+      }
+
+      .footer-links {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo.png" alt="The Parallax">
+      </a>
+      <div class="nav-links">
+        <a href="/about.html">About</a>
+        <a href="/archive/">Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="error-section">
+    <div class="error-code animate-fade-in-up">404</div>
+    <h1 class="animate-fade-in-up delay-1">Page Not Found</h1>
+    <p class="animate-fade-in-up delay-2">
+      The page you're looking for doesn't exist or may have been moved. Let's get you back on track.
+    </p>
+    <div class="error-links animate-fade-in-up delay-3">
+      <a href="/" class="btn-primary">Go to Homepage</a>
+      <a href="/archive/" class="btn-secondary">Browse Archive</a>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Never Miss an Issue</h2>
+    <p>Get the full picture delivered to your inbox every morning.</p>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/parallax"
+      method="post"
+      class="signup-form"
+    >
+      <input type="email" name="email" placeholder="you@email.com" required />
+      <input type="submit" value="Subscribe Free" />
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/archive/">Archive</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+    <p class="footer-note">
+      The Parallax is generated using AI analysis of news sources across the political spectrum.<br>
+      Pittsburgh, PA
+    </p>
+  </footer>
+
+  <script>
+    // Nav shadow on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
