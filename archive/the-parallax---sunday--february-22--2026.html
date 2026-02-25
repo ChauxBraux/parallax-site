@@ -40,6 +40,7 @@
     .nav-logo { display: flex; align-items: center; text-decoration: none; transition: opacity 0.2s; }
     .nav-logo:hover { opacity: 0.8; }
     .nav-logo img { height: 48px; width: auto; }
+    .nav-logo-text { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35em; font-weight: 700; color: var(--navy); margin-left: 10px; }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a { color: var(--text); text-decoration: none; font-size: 0.95em; transition: color 0.2s; }
     .nav-links a:hover { color: var(--blue); }
@@ -97,6 +98,7 @@
     @media (max-width: 480px) {
       nav { padding: 14px 16px; }
       .nav-logo img { height: 34px; }
+      .nav-logo-text { display: none; }
       .nav-links { gap: 16px; font-size: 0.9em; }
       .signup-form { flex-direction: column; }
       .signup-form input[type="email"], .signup-form input[type="submit"] { width: 100%; min-width: unset; }
@@ -108,6 +110,7 @@
     <div class="nav-container">
       <a href="/" class="nav-logo">
         <img src="/logo.png" alt="The Parallax">
+        <span class="nav-logo-text">The Parallax</span>
       </a>
       <div class="nav-links">
         <a href="/listen/" class="listen-link">🎧 Listen</a>
