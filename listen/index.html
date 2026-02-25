@@ -102,6 +102,14 @@
     
     .nav-logo:hover { opacity: 0.8; }
     .nav-logo img { height: 48px; width: auto; }
+    .nav-logo-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35em;
+      font-weight: 700;
+      color: var(--navy);
+      margin-left: 10px;
+    }
+
     
     .nav-links { display: flex; gap: 32px; }
     
@@ -312,6 +320,7 @@
     @media (max-width: 480px) {
       nav { padding: 14px 16px; }
       .nav-logo img { height: 34px; }
+      .nav-logo-text { display: none; }
       .nav-links { gap: 16px; }
       .nav-links a { font-size: 0.9em; }
       .hero { padding: 48px 16px; }
@@ -327,6 +336,7 @@
     <div class="nav-container">
       <a href="/" class="nav-logo">
         <img src="/logo.png" alt="The Parallax">
+        <span class="nav-logo-text">The Parallax</span>
       </a>
       <div class="nav-links">
         <a href="/listen/" class="active">🎧 Listen</a>
