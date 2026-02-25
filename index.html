@@ -160,6 +160,14 @@
       height: 48px;
       width: auto;
     }
+    .nav-logo-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.35em;
+      font-weight: 700;
+      color: var(--navy);
+      margin-left: 10px;
+    }
+
     
     .nav-links {
       display: flex;
@@ -669,6 +677,7 @@
       .nav-logo img {
         height: 26px;
       }
+      .nav-logo-text { display: none; }
       
       .nav-links {
         gap: 16px;
@@ -727,6 +736,7 @@
     <div class="nav-container">
       <a href="/" class="nav-logo">
         <img src="/logo.png" alt="The Parallax">
+        <span class="nav-logo-text">The Parallax</span>
       </a>
       <div class="nav-links">
         <a href="/listen/">🎧 Listen</a>
