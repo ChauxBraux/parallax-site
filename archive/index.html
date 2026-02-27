@@ -229,22 +229,32 @@
       color: var(--text);
     }
     
-    .archive-list .issue-date {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.1em, 3vw, 1.2em);
+    .archive-list .issue-title {
+      font-family: 'Source Sans Pro', -apple-system, sans-serif;
+      font-size: clamp(1em, 3vw, 1.1em);
+      font-weight: 600;
       color: var(--navy);
       margin-bottom: 4px;
       transition: color 0.2s;
     }
-    
-    .archive-list li:hover .issue-date {
+
+    .archive-list li:hover .issue-title {
       color: var(--blue);
     }
-    
-    .archive-list .issue-preview {
+
+    .archive-list .issue-date {
       font-size: clamp(0.85em, 2.5vw, 0.9em);
       color: var(--text-light);
       line-height: 1.5;
+    }
+
+    /* Hide the old "Daily news digest" previews on legacy entries */
+    .archive-list .issue-preview {
+      display: none;
+    }
+
+    .archive-list li:hover .issue-date {
+      color: var(--text-light);
     }
     
     .empty-state {
@@ -375,146 +385,146 @@
     <ul class="archive-list">
       <li>
         <a href="the-parallax-feb-27---hillary-clinton-testifies-before-house-oversight-committee-on-epstein-connections--accu---.html">
-          <div class="issue-date">New Issue</div>
-          <div class="issue-preview">Daily news digest</div>
+          <div class="issue-title">Hillary Clinton Testifies Before House Oversight Committee on Epstein Connections</div>
+          <div class="issue-date">Friday, February 27, 2026</div>
         </a>
       </li>
       <li>
         <a href="the-parallax-feb-26---clintons-set-for-back-to-back-depositions-on-epstein-ties.html">
-          <div class="issue-date">New Issue</div>
-          <div class="issue-preview">Daily news digest</div>
+          <div class="issue-title">Clintons Set for Back-to-Back Depositions on Epstein Ties</div>
+          <div class="issue-date">Thursday, February 26, 2026</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---thursday--february-26--2026.html">
-          <div class="issue-date">Thursday, February 26 2026</div>
-          <div class="issue-preview">Daily news digest</div>
+          <div class="issue-title">The Parallax — Thursday, February 26, 2026</div>
+          <div class="issue-date">Thursday, February 26, 2026</div>
         </a>
       </li>
       <li>
         <a href="the-parallax-feb-25---trump-delivers-longest-state-of-the-union--declares--turnaround-for-the-ages--amid-demo---.html">
-          <div class="issue-date">New Issue</div>
-          <div class="issue-preview">Daily news digest</div>
+          <div class="issue-title">Trump Delivers Longest State of the Union, Declares 'Turnaround for the Ages' Amid Democratic Boycott</div>
+          <div class="issue-date">Wednesday, February 25, 2026</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---tuesday--february-24--2026.html">
+          <div class="issue-title">The Parallax — Tuesday, February 24, 2026</div>
           <div class="issue-date">Tuesday, February 24, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---monday--february-23--2026.html">
+          <div class="issue-title">The Parallax — Monday, February 23, 2026</div>
           <div class="issue-date">Monday, February 23, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---sunday--february-22--2026.html">
+          <div class="issue-title">The Parallax — Sunday, February 22, 2026</div>
           <div class="issue-date">Sunday, February 22, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---saturday--february-21--2026.html">
+          <div class="issue-title">The Parallax — Saturday, February 21, 2026</div>
           <div class="issue-date">Saturday, February 21, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---friday--february-20--2026.html">
+          <div class="issue-title">The Parallax — Friday, February 20, 2026</div>
           <div class="issue-date">Friday, February 20, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---thursday--february-19--2026.html">
+          <div class="issue-title">The Parallax — Thursday, February 19, 2026</div>
           <div class="issue-date">Thursday, February 19, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---tuesday--february-10--2026.html">
+          <div class="issue-title">The Parallax — Tuesday, February 10, 2026</div>
           <div class="issue-date">Tuesday, February 10, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---sunday--february-8--2026.html">
+          <div class="issue-title">The Parallax — Sunday, February 8, 2026</div>
           <div class="issue-date">Sunday, February 8, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---saturday--february-7--2026.html">
+          <div class="issue-title">The Parallax — Saturday, February 7, 2026</div>
           <div class="issue-date">Saturday, February 7, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---friday--february-6--2026.html">
+          <div class="issue-title">The Parallax — Friday, February 6, 2026</div>
           <div class="issue-date">Friday, February 6, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---thursday--february-5--2026.html">
+          <div class="issue-title">The Parallax — Thursday, February 5, 2026</div>
           <div class="issue-date">Thursday, February 5, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---wednesday--february-4--2026.html">
+          <div class="issue-title">The Parallax — Wednesday, February 4, 2026</div>
           <div class="issue-date">Wednesday, February 4, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---tuesday--february-3--2026.html">
+          <div class="issue-title">The Parallax — Tuesday, February 3, 2026</div>
           <div class="issue-date">Tuesday, February 3, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---monday--february-2--2026.html">
+          <div class="issue-title">The Parallax — Monday, February 2, 2026</div>
           <div class="issue-date">Monday, February 2, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---sunday--february-1--2026.html">
+          <div class="issue-title">The Parallax — Sunday, February 1, 2026</div>
           <div class="issue-date">Sunday, February 1, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---saturday--january-31--2026.html">
+          <div class="issue-title">The Parallax — Saturday, January 31, 2026</div>
           <div class="issue-date">Saturday, January 31, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---friday--january-30--2026.html">
+          <div class="issue-title">The Parallax — Friday, January 30, 2026</div>
           <div class="issue-date">Friday, January 30, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---thursday--january-29--2026.html">
+          <div class="issue-title">The Parallax — Thursday, January 29, 2026</div>
           <div class="issue-date">Thursday, January 29, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---wednesday--january-28--2026.html">
+          <div class="issue-title">The Parallax — Wednesday, January 28, 2026</div>
           <div class="issue-date">Wednesday, January 28, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       <li>
         <a href="the-parallax---tuesday--january-27--2026.html">
+          <div class="issue-title">The Parallax — Tuesday, January 27, 2026</div>
           <div class="issue-date">Tuesday, January 27, 2026</div>
-          <div class="issue-preview">Daily news digest</div>
         </a>
       </li>
       </ul>
