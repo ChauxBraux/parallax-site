@@ -192,4 +192,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.readparallax.com/archive/the-parallax-mar-1-us-and-israel-launch-operation-epic-fury-killing-iran-s-supreme-leader-ali-khamenei.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
