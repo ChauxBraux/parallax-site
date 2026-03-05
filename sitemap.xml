@@ -216,4 +216,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.readparallax.com/archive/the-parallax-mar-5-senate-republicans-block-war-powers-resolution-on-iran-as-trump-operation-expands.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
