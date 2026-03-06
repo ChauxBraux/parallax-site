@@ -222,4 +222,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.readparallax.com/archive/the-parallax-mar-6-trump-fires-dhs-secretary-kristi-noem-names-sen-markwayne-mullin-as-replacement.html</loc>
+    <lastmod>2026-03-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
