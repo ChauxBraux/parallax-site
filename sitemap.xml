@@ -252,4 +252,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.readparallax.com/archive/the-parallax-mar-11-trump-backed-republican-advances-to-georgia-runoff-for-mtg-s-seat.html</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
