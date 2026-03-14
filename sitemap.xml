@@ -270,4 +270,10 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.readparallax.com/archive/the-parallax-mar-14-us-strikes-iran-s-kharg-island-oil-hub-as-war-escalates-into-third-week.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
