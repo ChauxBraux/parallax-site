@@ -1,24 +1,4 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers - Explicitly Allowed
-User-agent: GPTBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
 Sitemap: https://www.readparallax.com/sitemap.xml
-# Last deploy trigger: 2026-02-25T12:46:49.574016Z
